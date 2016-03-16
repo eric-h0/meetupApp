@@ -1,0 +1,19 @@
+/*Successfully linked*/
+
+body {
+  background-color: black;
+}
+
+footer {
+    clear: both;
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    font-size: 17px;
+}
+
+h1 {
+  font-size: 76px;
+  font-family: 'Paytone One', sans-serif;
+}
+
