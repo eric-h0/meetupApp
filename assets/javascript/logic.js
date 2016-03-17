@@ -2,6 +2,7 @@
 $("#eventDiv").hide();
 $("#inputSection").hide();
 
+//Makes the RU Going? title a home button.
 $("#homeButton").click(function(){
   $("#welcomeCenter").show();
   $("#eventDiv").hide();
