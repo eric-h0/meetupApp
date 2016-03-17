@@ -11,6 +11,12 @@ $("#goButton").click(function() {
   //Shows eventDiv after submit is pressed.
   $("#eventDiv").show();
   //Find a way for specific content to show up based on inputs selected from the dropdown menu.
+
+  //Going to have to put this on every page and customize it. 
+  $("#backButton").click(function(){
+    $("#eventDiv").hide();
+    $("#inputSection").show();
+  });
 });
 
 $("#eventJoin").click(function(){

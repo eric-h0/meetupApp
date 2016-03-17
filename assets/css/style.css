@@ -18,6 +18,10 @@ h1 {
 */  font-family: 'Paytone One', sans-serif;
 }
 
+#backButton {
+  background-color: gray;
+}
+
 #eventDiv {
   text-align: center;
 
@@ -45,6 +49,10 @@ h1 {
 #eventTime {
 /*  float: right;
 */}
+
+#forwardButton {
+  background-color: gray;
+}
 
 #goButton {
   background-color: #ff0000;
