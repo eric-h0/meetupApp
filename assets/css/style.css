@@ -20,19 +20,17 @@ h1 {
 
 #eventDiv {
   text-align: center;
+
 }
 
 #eventHeader {
-  font-size: 25px;
-  text-align: center;
+/*  font-size: 25px;
+*/  text-align: center;
 }
 
-#eventCreator {
-
-}
 
 #eventDiv img {
-  width: 70%;
+  width: 100%;
   height: auto;
 }
 
