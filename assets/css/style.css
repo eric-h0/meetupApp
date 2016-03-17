@@ -31,18 +31,16 @@ h1 {
 }
 
 #eventDiv img {
-  width: 500px;
+  width: 70%;
   height: auto;
 }
 
 #eventJoin {
   background-color: #ff0000;
-  font-size: 16px;
 }
 
 #eventSubmit {
   background-color: #ff0000;
-  font-size: 16px;
 }
 
 #eventTime {
