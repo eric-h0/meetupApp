@@ -1,5 +1,17 @@
 //Hides eventDiv, show after submit button is pressed and populate with information. Line 10.
 $("#eventDiv").hide();
+$("#inputSection").hide();
+
+//Find a Hangout! button click.
+$("#findButton").click(function(){
+  $("#inputSection").show();
+  $("#welcomeCenter").hide();
+});
+
+//Create Your Own! button click.
+$("#createButton").click(function(){
+  //Insert create inputs.
+});
 
 //Click function for Let's Go Button.
 $("#goButton").click(function() {
