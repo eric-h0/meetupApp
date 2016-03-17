@@ -23,7 +23,6 @@ $("#goButton").click(function() {
 
   //Clicking the button hides the input boxes and buttons, it'll show the event divs that will be dynamically created based on input.
   $("#inputSection").hide();
-
   //Shows eventDiv after submit is pressed.
   $("#eventDiv").show();
   //Find a way for specific content to show up based on inputs selected from the dropdown menu.
@@ -32,6 +31,7 @@ $("#goButton").click(function() {
   //Going to have to put this on every page and customize it. 
   $("#backButton").click(function(){
     $("#eventDiv").hide();
+    $("#welcomeCenter").hide();
     $("#inputSection").show();
   });
 });
@@ -40,6 +40,7 @@ $("#eventJoin").click(function(){
   $("#eventDiv").hide();
     //Back button functionality. Have to find a way to make this universal.
     $("#backButton").click(function(){
+      $("#welcomeCenter").hide();
       $("#inputSection").hide();
       $("#eventDiv").show();
     });
