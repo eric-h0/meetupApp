@@ -5,8 +5,8 @@ body {
 }
 
 footer {
-/*    clear: both;
-*/    position: fixed;
+    clear: both;
+    position: fixed;
     bottom: 2px;
     width: 100%;
     font-size: 14px;
