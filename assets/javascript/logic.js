@@ -1,4 +1,4 @@
-//Hides eventDiv, show after submit button is pressed and populate with information. Line 10.
+//Hides Divs
 $("#eventDiv").hide();
 $("#inputSection").hide();
 
@@ -41,8 +41,14 @@ $("#goButton").click(function() {
     $("#welcomeCenter").hide();
     $("#inputSection").show();
   });
+
+  $("#forwardButton").click(function(){
+    $("#eventDiv").show();
+    $("#inputSection").hide();
+  });
 });
 
+//Click function for join!
 $("#eventJoin").click(function(){
   $("#eventDiv").hide();
     //Back button functionality. Have to find a way to make this universal.
