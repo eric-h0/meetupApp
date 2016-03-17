@@ -24,7 +24,7 @@ h1 {
 
 #eventDiv {
   text-align: center;
-
+  width: 100%;
 }
 
 #eventHeader {
@@ -62,8 +62,4 @@ h1 {
 #goButtonDiv {
   text-align: center;
 }
-
-#toDoSelect {
-/*  width: 90%;
-*/}
 
