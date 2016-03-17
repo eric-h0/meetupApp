@@ -13,7 +13,7 @@ $("#goButton").click(function() {
   //Find a way for specific content to show up based on inputs selected from the dropdown menu.
 
   //Going to have to put this on every page and customize it. 
-  $("#backButton").click(function(){
+  $("#backButton").click(function(event){
     $("#eventDiv").hide();
     $("#inputSection").show();
   });
@@ -21,4 +21,8 @@ $("#goButton").click(function() {
 
 $("#eventJoin").click(function(){
   $("#eventDiv").hide();
+    $("#backButton").click(function(){
+      $("#inputSection").hide();
+      $("#eventDiv").show();
+    });
 });
