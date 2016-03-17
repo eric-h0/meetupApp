@@ -35,6 +35,11 @@ h1 {
   height: auto;
 }
 
+#eventJoin {
+  background-color: #ff0000;
+  font-size: 16px;
+}
+
 #eventSubmit {
   background-color: #ff0000;
   font-size: 16px;

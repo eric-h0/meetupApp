@@ -12,3 +12,7 @@ $("#goButton").click(function() {
   $("#eventDiv").show();
   //Find a way for specific content to show up based on inputs selected from the dropdown menu.
 });
+
+$("#eventJoin").click(function(){
+  $("#eventDiv").hide();
+});
