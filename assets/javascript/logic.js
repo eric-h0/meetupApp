@@ -10,4 +10,5 @@ $("#goButton").click(function() {
 
   //Shows eventDiv after submit is pressed.
   $("#eventDiv").show();
+  //Find a way for specific content to show up based on inputs selected from the dropdown menu.
 });

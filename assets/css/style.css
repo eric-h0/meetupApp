@@ -17,6 +17,26 @@ h1 {
   font-family: 'Paytone One', sans-serif;
 }
 
+#eventDiv {
+  text-align: center;
+/*  font-size: 25px;
+*/}
+
+#eventHeader {
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+#eventDiv img {
+  width: 500px;
+  height: auto;
+}
+
+#eventSubmit {
+  background-color: #ff0000;
+  font-size: 16px;
+}
+
 #goButton {
   background-color: #ff0000;
   font-size: 25px;
