@@ -5,8 +5,8 @@ body {
 }
 
 footer {
-    clear: both;
-    position: fixed;
+/*    clear: both;
+*/    position: fixed;
     bottom: 2px;
     width: 100%;
     font-size: 14px;
@@ -56,8 +56,7 @@ h1 {
 
 #goButton {
   background-color: #ff0000;
-/*  width: 90%;
-*/}
+}
 
 #goButtonDiv {
   text-align: center;
