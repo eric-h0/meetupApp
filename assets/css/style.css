@@ -15,8 +15,7 @@ footer {
 }
 
 h1 {
-/*  font-size: 76px;
-*/  font-family: 'Paytone One', sans-serif;
+  font-family: 'Paytone One', sans-serif;
 }
 
 #backButton {
@@ -29,10 +28,8 @@ h1 {
 }
 
 #eventHeader {
-/*  font-size: 25px;
-*/  text-align: center;
+  text-align: center;
 }
-
 
 #eventDiv img {
   width: 100%;
@@ -48,8 +45,7 @@ h1 {
 }
 
 #eventTime {
-/*  float: right;
-*/}
+}
 
 #forwardButton {
   background-color: white;
@@ -59,4 +55,11 @@ h1 {
 #goButton {
   background-color: #ff0000;
   font-size: 25px;
+}
+
+#navButtons {
+  position: fixed;
+  bottom: 30px;
+  width: 100%;
+  margin-top: 20px;
 }
