@@ -56,9 +56,14 @@ h1 {
 
 #goButton {
   background-color: #ff0000;
-}
+/*  width: 90%;
+*/}
 
 #goButtonDiv {
   text-align: center;
 }
+
+#toDoSelect {
+/*  width: 90%;
+*/}
 

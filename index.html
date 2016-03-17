@@ -13,8 +13,10 @@
 <body>
 
 <!-- Container -->  
-<div class="container"><br><br>
 
+<div class="container"><br><br>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+  
   <!-- R U Going Header -->
   <h1 align="center"><img src="assets/images/rutgers.png" height="80" width="auto">U Going?</h1><br><br>
 
@@ -22,7 +24,7 @@
   <div id="inputSection">
 
   <!-- Where are you input. #whereInput -->
-   <label for="select">Which campus are you on?</label>
+   <label for="select" >Which campus are you on?</label>
     <div class="form-group">
           <select class="form-control" id="toDoSelect">
             <option>Busch</option>
@@ -50,9 +52,7 @@
     <br>
 
   <!-- Submit button #goButton-->
-  <div id="goButtonDiv">
-  <a href="#" class="btn btn-default" id="goButton">Let's go!</a><br>
-  </div>
+  <a href="#" class="btn btn-default btn-lg btn-block" id="goButton">Let's go!</a><br>
 
   </div>
   <!-- ^Container for Inputs and Button -->
@@ -64,16 +64,18 @@
         <element id= "eventCreator"><h6>Created by: Eric Ho</h6></element>
         <img src="assets/images/knightClub.jpg"><br>
         <element id = "eventTime"><h6>Event time: 11:00pm</h6></element>
-        <a href="#" id = "eventJoin" class="btn btn-default">Join this hangout</a><br>
+        <a href="#" id = "eventJoin" align="center" class="btn btn-default">Join this hangout</a><br>
       </div>
   </div>
 
 </div>
-<!-- ^Container -->
-
+</div>
 <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
   <!-- Empty -->
 </div>
+<!-- ^Container -->
+
+<!-- Navigation Buttons -->
 <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
   <ul class="pager">
     <li class="previous disabled"><a href="#" id="backButton">&larr; Back</a></li>
@@ -83,6 +85,7 @@
 <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
   <!-- Empty -->
 </div>
+
 <!-- Footer -->
 <footer align="center">&copy; Ninth Mystery Productions</footer>
 
