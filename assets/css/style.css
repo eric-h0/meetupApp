@@ -6,12 +6,12 @@ body {
 }
 
 footer {
-    clear: both;
-    position: fixed;
-    bottom: 2px;
+    position: absolute;
+    bottom: 5px;
     width: 100%;
     font-size: 14px;
-    margin-top: 10px;
+    float: bottom;
+    text-align: center;
 }
 
 h1 {
@@ -24,16 +24,15 @@ h1 {
 
 #eventDiv {
   text-align: center;
-
-}
-
-#eventHeader {
-  text-align: center;
 }
 
 #eventDiv img {
   width: 100%;
   height: auto;
+}
+
+#eventHeader {
+  text-align: center;
 }
 
 #eventJoin {
