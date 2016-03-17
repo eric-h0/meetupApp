@@ -2,6 +2,12 @@
 $("#eventDiv").hide();
 $("#inputSection").hide();
 
+$("#homeButton").click(function(){
+  $("#welcomeCenter").show();
+  $("#eventDiv").hide();
+  $("#inputSection").hide();
+});
+
 //Find a Hangout! button click.
 $("#findButton").click(function(){
   $("#inputSection").show();
