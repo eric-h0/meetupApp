@@ -5,17 +5,17 @@ body {
 }
 
 footer {
-/*    clear: both;
-*/    position: fixed;
+    clear: both;
+    position: fixed;
     bottom: 2px;
     width: 100%;
     font-size: 14px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 h1 {
-  font-family: 'Paytone One', sans-serif;
-  width: 100%;
+/*  font-size: 76px;
+*/  font-family: 'Paytone One', sans-serif;
 }
 
 #backButton {
@@ -24,7 +24,7 @@ h1 {
 
 #eventDiv {
   text-align: center;
-  width: 100%;
+
 }
 
 #eventHeader {
@@ -56,9 +56,13 @@ h1 {
 
 #goButton {
   background-color: #ff0000;
-}
+/*  width: 90%;
+*/}
 
 #goButtonDiv {
   text-align: center;
 }
 
+#toDoSelect {
+/*  width: 90%;
+*/}
