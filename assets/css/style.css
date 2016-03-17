@@ -6,11 +6,10 @@ body {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 5px;
     width: 100%;
-    font-size: 14px;
-    float: bottom;
+    font-size: 10px;
     text-align: center;
 }
 
