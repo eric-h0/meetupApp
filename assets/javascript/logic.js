@@ -1,5 +1,6 @@
 //Hides eventDiv, show after submit button is pressed and populate with information. Line 10.
 $("#eventDiv").hide();
+$('#body').css('min-height', screen.height);
 
 //Click function for Let's Go Button.
 $("#goButton").click(function() {
