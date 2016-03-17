@@ -10,11 +10,12 @@ footer {
     bottom: 2px;
     width: 100%;
     font-size: 14px;
+    margin-top: 10px;
 }
 
 h1 {
-  font-size: 76px;
-  font-family: 'Paytone One', sans-serif;
+/*  font-size: 76px;
+*/  font-family: 'Paytone One', sans-serif;
 }
 
 #eventDiv {
