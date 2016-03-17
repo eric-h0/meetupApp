@@ -2,7 +2,6 @@
 
 body {
   background-color: black;
-  overflow: hidden;
 }
 
 footer {
@@ -57,13 +56,5 @@ h1 {
 
 #goButton {
   background-color: #ff0000;
-/*  width: 90%;
-*/}
-
-#goButtonDiv {
-  text-align: center;
+  font-size: 25px;
 }
-
-#toDoSelect {
-/*  width: 90%;
-*/}
