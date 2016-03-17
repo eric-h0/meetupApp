@@ -14,8 +14,8 @@ footer {
 }
 
 h1 {
-/*  font-size: 76px;
-*/  font-family: 'Paytone One', sans-serif;
+  font-family: 'Paytone One', sans-serif;
+  width: 100%;
 }
 
 #backButton {
