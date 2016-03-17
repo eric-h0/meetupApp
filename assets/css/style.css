@@ -56,5 +56,9 @@ h1 {
 
 #goButton {
   background-color: #ff0000;
-  font-size: 25px;
 }
+
+#goButtonDiv {
+  text-align: center;
+}
+
