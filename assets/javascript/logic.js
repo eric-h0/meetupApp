@@ -6,6 +6,10 @@ $("#inputSection").hide();
 $("#findButton").click(function(){
   $("#inputSection").show();
   $("#welcomeCenter").hide();
+    $("#backButton").click(function(){
+      $("#inputSection").hide();
+      $("#welcomeCenter").show();
+    });
 });
 
 //Create Your Own! button click.
