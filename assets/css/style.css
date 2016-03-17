@@ -19,7 +19,13 @@ h1 {
 
 #backButton {
   background-color: white;
-  color: black;}
+  color: black;
+}
+
+#createButton {
+  background-color: #ff0000;
+  font-size: 25px;
+}
 
 #eventDiv {
   text-align: center;
@@ -45,6 +51,11 @@ h1 {
 #eventTime {
 }
 
+#findButton {
+  background-color: #ff0000;
+  font-size: 25px;
+}
+
 #forwardButton {
   background-color: white;
   color: black;
@@ -60,4 +71,10 @@ h1 {
   bottom: 30px;
   width: 100%;
   margin-top: 20px;
+}
+
+#welcomeCenter img {
+  width: 40%;
+  height: auto;
+  text-align: center;
 }
