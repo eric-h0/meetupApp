@@ -57,3 +57,24 @@ $("#eventJoin").click(function(){
       $("#eventDiv").show();
     });
 });
+
+var queryURL = "http://api.wunderground.com/api/c594801c0edbc586/conditions/q/NJ/New_Brunswick.json";
+
+$.ajax({url: queryURL, method: 'GET'})
+.done(function(response){
+
+var city = response.current_observation.display_location.city;
+
+var weather = response.current_observation.weather;
+
+var iconURL = response.current_observation.icon_url;
+
+var temp = response.current_observation.temp_f;
+
+//append that shit to a div
+// $("#weather").append(city + "<br>");
+$("#weather").append(weather + "<br>");
+$("#weather").append(temp + "&#8457"+ "<br>");
+$("#weather").append("<img src='"+iconURL+"'>");
+
+});

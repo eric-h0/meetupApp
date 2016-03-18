@@ -78,3 +78,7 @@ h1 {
   height: auto;
   text-align: center;
 }
+
+#weather img {
+  width: 40px;
+}
