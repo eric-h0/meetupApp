@@ -74,10 +74,9 @@ var temp = response.current_observation.temp_f;
 
 //append that shit to a div
 // $("#weather").append(city + "<br>");
-$("#weather").append(weather + "<br>");
-$("#weather").append(temp + "&#8457"+ "<br>");
+// $("#weather").append(weather + "<br>");
 $("#weather").append("<img src='"+iconURL+"'>");
-
+$("#weather").append(temp + "&#8457"+ "<br>");
 });
 
 //Leslie's awesome chat section
@@ -104,7 +103,6 @@ $("#weather").append("<img src='"+iconURL+"'>");
     var data = snapshot.val();
     var username = data.name || "anonymous";
     var message = data.text;
-
     var messageElement = $("<li>");
     var nameElement = $("<b class='chat-username'></b>")
     nameElement.text(username);
