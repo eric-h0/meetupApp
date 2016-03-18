@@ -58,6 +58,7 @@ $("#eventJoin").click(function(){
     });
 });
 
+//Aaron's awesome weather section
 var queryURL = "http://api.wunderground.com/api/c594801c0edbc586/conditions/q/NJ/New_Brunswick.json";
 
 $.ajax({url: queryURL, method: 'GET'})
@@ -78,3 +79,40 @@ $("#weather").append(temp + "&#8457"+ "<br>");
 $("#weather").append("<img src='"+iconURL+"'>");
 
 });
+
+//Leslie's awesome chat section
+  var messagesRef = new Firebase('https://ninthmysterychat.firebaseio.com/');
+  var messageField = $('#messageInput');
+  var nameField = $('#nameInput');
+  var messageList = $('#messages');
+
+  messageField.keypress(function (e) {
+    if (e.keyCode == 13) {
+      //FIELD VALUES
+      var username = nameField.val().trim();
+      var message = messageField.val().trim();
+
+      //SAVE DATA TO FIREBASE AND EMPTY FIELD
+      messagesRef.push({name:username, text:message});
+      messageField.val(name);
+    } 
+   
+  });
+
+  messagesRef.limitToLast(10).on('child_added', function (snapshot) {
+    //GET DATA
+    var data = snapshot.val();
+    var username = data.name || "anonymous";
+    var message = data.text;
+
+    var messageElement = $("<li>");
+    var nameElement = $("<b class='chat-username'></b>")
+    nameElement.text(username);
+    messageElement.text(message).prepend(nameElement);
+
+    //ADD MESSAGE
+    messageList.append(messageElement)
+
+    //messageList[0].scrollTop = messageList[0].scrollHeight;
+
+  });
