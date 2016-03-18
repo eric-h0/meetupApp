@@ -35,7 +35,6 @@ $("#goButton").click(function() {
   //Find a way for specific content to show up based on inputs selected from the dropdown menu.
   //eventDiv = #eventheader / #eventCreator / #eventTime / #eventJoin button.
 
-  //Going to have to put this on every page and customize it. 
   $("#backButton").click(function(){
     $("#eventDiv").hide();
     $("#welcomeCenter").hide();
