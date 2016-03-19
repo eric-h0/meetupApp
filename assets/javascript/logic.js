@@ -29,6 +29,12 @@ $("#createButton").click(function(){
   $("#welcomeCenter").hide();
 })
 
+$("#findEvent").click(function(){
+  $("#eventDiv").show();
+  $("#findSection").modal('hide');
+})
+
+
 // //Create a Hangout! button click.
 // $("#createButton").click(function(){
 //   $("#createSection").show();
