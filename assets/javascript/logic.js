@@ -29,11 +29,13 @@ $("#createButton").click(function(){
   $("#welcomeCenter").hide();
 })
 
+//Find event button on modal.
 $("#findEvent").click(function(){
   $("#eventDiv").show();
   $("#findSection").modal('hide');
 })
 
+//Add event button on modal.
 $("#addEvent").click(function(){
   $("#eventDiv").show();
   $("#createSection").modal('hide');
