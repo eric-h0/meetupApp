@@ -267,9 +267,9 @@ $('#createEventForm').hide();
       data.addColumn('string', 'Topping');
       data.addColumn('number', 'Slices');
       data.addRows([
-        ['College Ave', 88],
+        ['College Ave.', 88],
         ['Busch', 32],
-        ['Cook/Douglas', 12], 
+        ['Cook/Douglass', 12], 
         ['Livingston', 59]
       ]);
 
