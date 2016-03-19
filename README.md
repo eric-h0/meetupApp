@@ -1,4 +1,4 @@
-ru-going.herokuapp.com
+https://ru-going.herokuapp.com
 
 An app created for Rutgers Students create group events with their fellow classmates. Design was created with mobile platforms in mind.
 
