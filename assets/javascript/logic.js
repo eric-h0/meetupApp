@@ -41,6 +41,13 @@ $("#addEvent").click(function(){
   $("#createSection").modal('hide');
 })
 
+//Close Button function.
+$(".close").click(function(){
+  $("#findSection").hide();
+  $("#createSection").hide();
+  $("#welcomeCenter").show();
+})
+
 // //Create a Hangout! button click.
 // $("#createButton").click(function(){
 //   $("#createSection").show();
@@ -240,8 +247,51 @@ dataRef.orderByChild("dateAdded").on("child_added", function(snapshot){
 
 }); //end doc on ready
 
-
-
-
  
 $('#createEventForm').hide();
+
+//Aaron's pie chart
+
+      // Load the Visualization API and the piechart package.
+      google.load('visualization', '1.0', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table, 
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+      // Create the data table.
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Topping');
+      data.addColumn('number', 'Slices');
+      data.addRows([
+        ['College Ave', 3],
+        ['Busch', 1],
+        ['Cook/Douglas', 1], 
+        ['Livingston', 2]
+      ]);
+
+      // Set chart options
+      var options = {  width: 400,
+                        height: 240,
+                        title: 'Where\'s the action?',
+                        colors: ['red', 'black', 'grey', 'lightgrey'],
+                        is3D: true,
+                        backgroundColor: 'black',
+                        pieSliceText: 'value',
+                        titleTextStyle:{ color: 'white',
+                                      fontSize: 20,
+                                      bold: false,
+                                      italic: false},
+                        legend: {position: 'right', textStyle: {color: 'white', fontSize: 12}}
+
+
+                      };
+
+      // Instantiate and draw our chart, passing in some options.
+      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
