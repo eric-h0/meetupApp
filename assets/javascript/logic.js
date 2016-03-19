@@ -1,23 +1,36 @@
 //Hides Divs
+$("#createSection").hide();
 $("#eventDiv").hide();
-$("#inputSection").hide();
+$("#findSection").hide();
 
 //Makes the RU Going? title a home button.
 $("#homeButton").click(function(){
   $("#welcomeCenter").show();
   $("#eventDiv").hide();
-  $("#inputSection").hide();
+  $("#findSection").hide();
 });
 
 //Find a Hangout! button click.
 $("#findButton").click(function(){
-  $("#inputSection").show();
+  $("#findSection").show();
   $("#welcomeCenter").hide();
     $("#backButton").click(function(){
-      $("#inputSection").hide();
+      $("#findSection").hide();
       $("#welcomeCenter").show();
+      $("#eventDiv").hide();
     });
 });
+
+// //Create a Hangout! button click.
+// $("#createButton").click(function(){
+//   $("#createSection").show();
+//   $("#welcomeCenter").hide();
+//     $("#backButton").click(function(){
+//       $("#createSection").hide();
+//       $("#welcomeCenter").show();
+//       $("#eventDiv").hide();
+//     });
+// });
 
 //Create Your Own! button click.
 $("#createButton").click(function(){
@@ -29,7 +42,7 @@ $("#goButton").click(function() {
   console.log(this);
 
   //Clicking the button hides the input boxes and buttons, it'll show the event divs that will be dynamically created based on input.
-  $("#inputSection").hide();
+  $("#findSection").hide();
   //Shows eventDiv after submit is pressed.
   $("#eventDiv").show();
   //Find a way for specific content to show up based on inputs selected from the dropdown menu.
@@ -38,12 +51,12 @@ $("#goButton").click(function() {
   $("#backButton").click(function(){
     $("#eventDiv").hide();
     $("#welcomeCenter").hide();
-    $("#inputSection").show();
+    $("#findSection").show();
   });
 
   $("#forwardButton").click(function(){
     $("#eventDiv").show();
-    $("#inputSection").hide();
+    $("#findSection").hide();
   });
 });
 
@@ -53,7 +66,7 @@ $("#eventJoin").click(function(){
     //Back button functionality. Have to find a way to make this universal.
     $("#backButton").click(function(){
       $("#welcomeCenter").hide();
-      $("#inputSection").hide();
+      $("#findSection").hide();
       $("#eventDiv").show();
     });
 });
@@ -64,13 +77,13 @@ var queryURL = "http://api.wunderground.com/api/c594801c0edbc586/conditions/q/NJ
 $.ajax({url: queryURL, method: 'GET'})
 .done(function(response){
 
-var city = response.current_observation.display_location.city;
+var city    = response.current_observation.display_location.city;
 
 var weather = response.current_observation.weather;
 
 var iconURL = response.current_observation.icon_url;
 
-var temp = response.current_observation.temp_f;
+var temp    = response.current_observation.temp_f;
 
 //append that shit to a div
 // $("#weather").append(city + "<br>");
@@ -80,16 +93,17 @@ $("#weather").append(temp + "&#8457"+ "<br>");
 });
 
 //Leslie's awesome chat section
-  var messagesRef = new Firebase('https://ninthmysterychat.firebaseio.com/');
+  var messagesRef  = new Firebase('https://ninthmysterychat.firebaseio.com/');
   var messageField = $('#messageInput');
-  var nameField = $('#nameInput');
-  var messageList = $('#messages');
+  var nameField    = $('#nameInput');
+  var messageList  = $('#messages');
 
+  
   messageField.keypress(function (e) {
     if (e.keyCode == 13) {
       //FIELD VALUES
       var username = nameField.val().trim();
-      var message = messageField.val().trim();
+      var message  = messageField.val().trim();
 
       //SAVE DATA TO FIREBASE AND EMPTY FIELD
       messagesRef.push({name:username, text:message});
@@ -98,13 +112,14 @@ $("#weather").append(temp + "&#8457"+ "<br>");
    
   });
 
+
   messagesRef.limitToLast(10).on('child_added', function (snapshot) {
     //GET DATA
-    var data = snapshot.val();
-    var username = data.name || "anonymous";
-    var message = data.text;
+    var data           = snapshot.val();
+    var username       = data.name || "anonymous";
+    var message        = data.text;
     var messageElement = $("<li>");
-    var nameElement = $("<b class='chat-username'></b>")
+    var nameElement    = $("<b class='chat-username'></b>")
     nameElement.text(username);
     messageElement.text(message).prepend(nameElement);
 
