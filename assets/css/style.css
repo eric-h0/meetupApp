@@ -117,10 +117,13 @@ margin         : 0 auto;
 
 #addEvent {
   width: 100%;
+  background-color: #ff0000;
 }
 
 #findEvent {
   width: 100%;
+    background-color: #ff0000;
+
 }
 
 #closeEvent {
