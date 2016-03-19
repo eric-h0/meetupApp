@@ -59,7 +59,6 @@
                   <input class="form-control eventName"  id="focusedInput" type="text" value="" placeholder="Event Name">
                   <br> 
               </div> <!-- end event name -->
-
                 <div class="oneLine">
                    <label class="control-label" for="focusedInput">&nbsp;&nbsp;</label>
                   <input class="form-control eventDate"  id="focusedInput" type="date" value="" placeholder="Date">
@@ -74,9 +73,6 @@
                  
               </div>     <!-- end oneLine, this will make it so these 3 boxes appear on one line -->       
             </div> <!-- end addEventForm -->
-
-            <label class="control-label" for="focusedInput">Tell us about it:</label>
-            <textarea class="form-control eventDescription"  id="focusedInput" type="text" value="" placeholder="What's going down?"></textarea>
             <br>
 
             <label for="select">What category best describes your event?</label>
@@ -90,8 +86,7 @@
                       <option>Sports</option>
                       <option>Study</option>
                     </select>
-              </div>
-              <br>
+              </div><br>
 
              <label for="select">Where is your event located?</label>
               <div class="form-group">
@@ -103,14 +98,18 @@
                       <option>Livingston</option>
                       <option>Off-campus</option>
                     </select>
-              </div>
+              </div><br>
+
+            <label class="control-label" for="focusedInput">Tell us about it:</label>
+            <textarea class="form-control eventDescription"  id="focusedInput" type="text" value="" placeholder="What's going down?"></textarea>
+
 
         </div>
         <div class="modal-footer">
             <button type="submit" id="addEvent" class="btn btn-default">Add Event</button> <br> <br>
 
-<!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
- -->
+      <!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
+       -->
         </div>
       </div>
 
