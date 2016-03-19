@@ -44,7 +44,7 @@ $("#findEvent").click(function(){
 //       $("#welcomeCenter").show();
 //       $("#eventDiv").hide();
 //     });
-// });
+// }); yep
 
 //Create Your Own! button click.
 $("#createButton").click(function(){
