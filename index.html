@@ -7,9 +7,12 @@
   <!-- HTML Magic -->
   <meta charset="UTF-8">
   <!-- iPhone Optimization -->
-  <link rel="apple-touch-icon" href="assets/images/icon.jpg">
-  <meta name="apple-mobile-web-app-capable" content="yes"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <!-- App Icon Image -->
+    <link rel="apple-touch-icon" href="assets/images/icon.jpg">
+    <!-- Allows application to become a mobile app -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- Stops user from being able to double-tap zoom -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <!-- Google Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
   <!-- Bootstrap -->
@@ -17,6 +20,7 @@
   <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
   <!-- Bootswatch -->
   <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
+  <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
   <title>RU Going?</title>
 </head>
@@ -30,15 +34,15 @@
 
   <!-- Container for search or create prompt #findButton #createButton -->
   <div id="welcomeCenter" align="center">
-      <a href="#" class="btn btn-default btn-lg btn-block" id="findButton">Find a Hangout!</a><br><br>
+      <a href="#" class="btn btn-default btn-lg btn-block" id="findButton" data-toggle="modal" data-target="#findSection">Find a Hangout!</a><br><br>
       <a href="#" class="btn btn-default btn-lg btn-block" id="createButton"
-      data-toggle="modal" data-target="#myModal">Create Your Own!</a><br><br>
+      data-toggle="modal" data-target="#createSection">Create Your Own!</a><br><br>
       <img align="center" src="assets/images/welcome.png">
   </div>
 
   <!-- Container for Create -->
   <!-- MODAL. USE THIS. -->
-  <div id="myModal" class="modal fade" role="dialog">
+  <div id="createSection" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->
@@ -62,13 +66,11 @@
                 <div class="oneLine">
                    <label class="control-label" for="focusedInput">&nbsp;&nbsp;</label>
                   <input class="form-control eventDate"  id="focusedInput" type="date" value="" placeholder="Date">
-                  <br>              
                 </div> <!-- end Date input -->
          
                 <div class="oneLine">
                    <label class="control-label" for="focusedInput">&nbsp;&nbsp;</label>
                   <input class="form-control eventTime"  id="focusedInput" type="time" value="" placeholder="Time">
-                  <br>              
                 </div> <!-- end Time input -->
                  
               </div>     <!-- end oneLine, this will make it so these 3 boxes appear on one line -->       
@@ -117,44 +119,54 @@
   </div>
 
   <!-- Container for Find -->
-  <div id="findSection">
-  <div class="form-group">
-    <label class="control-label" for="focusedInput">What's your name?</label>
-    <input class="form-control" id="focusedInput" type="text" value="">
-  </div><br>
+  <div id="findSection" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-  <!-- Where are you input. #whereInput -->
-   <label for="select">Which campus are you on?</label>
-    <div class="form-group">
-          <select class="form-control" id="toDoSelect">
-            <option>Busch</option>
-            <option>College Avenue</option>
-            <option>Douglass</option>
-            <option>Cook</option>
-            <option>Livingston</option>
-            <option>Off-campus</option>
-          </select>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Find an Event</h4>
+        </div>
+        <div class="modal-body">
+            
+            <div class="form-group">
+
+             <label for="select">Which campus would you like to visit?</label>
+              <div class="form-group">
+                    <select class="form-control eventLocation">
+                      <option>Busch</option>
+                      <option>College Avenue</option>
+                      <option>Douglass</option>
+                      <option>Cook</option>
+                      <option>Livingston</option>
+                      <option>Off-campus</option>
+                    </select>
+              </div><br>
+
+              <label for="select">What would you like to do?</label>
+              <div class="form-group">
+                    <select class="form-control eventCat">
+                      <option>Bars</option>
+                      <option>Food</option>
+                      <option>Hangout</option>
+                      <option>Jam Session</option>
+                      <option>Movies</option>
+                      <option>Sports</option>
+                      <option>Study</option>
+                    </select>
+              </div><br>
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" id="findEvent" class="btn btn-default">Find Hangout</button> <br> <br>
+
+      <!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
+       -->
+        </div>
+      </div>
+
     </div>
-    <br>
-
-  <!-- What do you want to do input. #toDoSelect -->
-  <label for="select">What do you want to do?</label>
-    <div class="form-group">
-          <select class="form-control" id="toDoSelect">
-            <option>Bars</option>
-            <option>Food</option>
-            <option>Hangout</option>
-            <option>Jam Session</option>
-            <option>Movies</option>
-            <option>Sports</option>
-            <option>Study</option>
-          </select>
-    </div>
-    <br>
-
-  <!-- Submit button #goButton-->
-  <a href="#" class="btn btn-default btn-lg btn-block" id="goButton">Let's go!</a><br>
-
   </div>
   <!-- ^Container for Find -->
   
