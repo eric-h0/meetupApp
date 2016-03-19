@@ -2,12 +2,14 @@
 $("#createSection").hide();
 $("#eventDiv").hide();
 $("#findSection").hide();
+$("#createEventForm").hide();
 
 //Makes the RU Going? title a home button.
 $("#homeButton").click(function(){
   $("#welcomeCenter").show();
   $("#eventDiv").hide();
   $("#findSection").hide();
+  $("#createEventForm").hide();
 });
 
 //Find a Hangout! button click.
@@ -20,6 +22,12 @@ $("#findButton").click(function(){
       $("#eventDiv").hide();
     });
 });
+
+//Create a Hangout! button click.
+$("#createButton").click(function(){
+  $("#createEventForm").show();
+  $("#welcomeCenter").hide();
+})
 
 // //Create a Hangout! button click.
 // $("#createButton").click(function(){
@@ -97,7 +105,6 @@ $("#weather").append(temp + "&#8457"+ "<br>");
   var messageField = $('#messageInput');
   var nameField    = $('#nameInput');
   var messageList  = $('#messages');
-
   
   messageField.keypress(function (e) {
     if (e.keyCode == 13) {
@@ -111,7 +118,6 @@ $("#weather").append(temp + "&#8457"+ "<br>");
     } 
    
   });
-
 
   messagesRef.limitToLast(10).on('child_added', function (snapshot) {
     //GET DATA

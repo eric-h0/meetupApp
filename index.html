@@ -4,6 +4,7 @@
 <head>
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous"></script>
+  <!-- HTML Magic -->
   <meta charset="UTF-8">
   <!-- iPhone Optimization -->
   <link rel="apple-touch-icon" href="assets/images/icon.jpg">
@@ -11,6 +12,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
   <!-- Google Fonts -->
   <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
+  <!-- Bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
   <!-- Bootswatch -->
   <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
@@ -27,13 +31,94 @@
   <!-- Container for search or create prompt #findButton #createButton -->
   <div id="welcomeCenter" align="center">
       <a href="#" class="btn btn-default btn-lg btn-block" id="findButton">Find a Hangout!</a><br><br>
-      <a href="#" class="btn btn-default btn-lg btn-block" id="createButton">Create Your Own!</a><br><br>
+      <a href="#" class="btn btn-default btn-lg btn-block" id="createButton"
+      data-toggle="modal" data-target="#myModal">Create Your Own!</a><br><br>
       <img align="center" src="assets/images/welcome.png">
+  </div>
+
+  <!-- Container for Create -->
+  <!-- MODAL. USE THIS. -->
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Create Your Event</h4>
+        </div>
+        <div class="modal-body">
+            
+            <div class="form-group">
+
+            <!-- <div class="addEventForm"> -->
+              <label class="control-label" for="focusedInput">Event Info:&nbsp;&nbsp;</label>
+              <div class="infoOneLine">
+                <div class="oneLine" style="margin-left: 0;">  
+                  
+                  <input class="form-control eventName"  id="focusedInput" type="text" value="" placeholder="Event Name">
+                  <br> 
+              </div> <!-- end event name -->
+
+                <div class="oneLine">
+                   <label class="control-label" for="focusedInput">&nbsp;&nbsp;</label>
+                  <input class="form-control eventDate"  id="focusedInput" type="date" value="" placeholder="Date">
+                  <br>              
+                </div> <!-- end Date input -->
+         
+                <div class="oneLine">
+                   <label class="control-label" for="focusedInput">&nbsp;&nbsp;</label>
+                  <input class="form-control eventTime"  id="focusedInput" type="time" value="" placeholder="Time">
+                  <br>              
+                </div> <!-- end Time input -->
+                 
+              </div>     <!-- end oneLine, this will make it so these 3 boxes appear on one line -->       
+            </div> <!-- end addEventForm -->
+
+            <label class="control-label" for="focusedInput">Tell us about it:</label>
+            <textarea class="form-control eventDescription"  id="focusedInput" type="text" value="" placeholder="What's going down?"></textarea>
+            <br>
+
+            <label for="select">What category best describes your event?</label>
+              <div class="form-group">
+                    <select class="form-control eventCat">
+                      <option>Bars</option>
+                      <option>Food</option>
+                      <option>Hangout</option>
+                      <option>Jam Session</option>
+                      <option>Movies</option>
+                      <option>Sports</option>
+                      <option>Study</option>
+                    </select>
+              </div>
+              <br>
+
+             <label for="select">Where is your event located?</label>
+              <div class="form-group">
+                    <select class="form-control eventLocation">
+                      <option>Busch</option>
+                      <option>College Avenue</option>
+                      <option>Douglass</option>
+                      <option>Cook</option>
+                      <option>Livingston</option>
+                      <option>Off-campus</option>
+                    </select>
+              </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" id="addEvent" class="btn btn-default">Add Event</button> <br> <br>
+
+<!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
+ -->
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <!-- Container for Find -->
   <div id="findSection">
-
   <div class="form-group">
     <label class="control-label" for="focusedInput">What's your name?</label>
     <input class="form-control" id="focusedInput" type="text" value="">
@@ -85,11 +170,30 @@
         <table class="table table-striped table-hover">
         <thead>
           <tr>
-            <td><element id= "eventCreator"><h6>Created by:<br>Eric Ho</h6></element></td>
-            <td><h6><div id="weather">
-              <!-- Weather info shoots here -->
-            </div></h6></td>
-            <td><element id = "eventTime"><h6>Event time:<br>11:00pm</h6></element></td>
+            <!-- Event Creator #eventCreator -->
+            <td>
+              <element id= "eventCreator">
+                <h6>
+                Created by:<br>Eric Ho
+                </h6>
+              </element>
+            </td>
+            <!-- Weather -->
+            <td>
+              <h6> 
+                <div id="weather">
+                <!-- Weather info shoots here -->
+                </div>
+              </h6>
+            </td>
+            <!-- Event time -->
+            <td>
+              <element id = "eventTime">
+                <h6>
+                Event time:<br>11:00pm
+                </h6>
+              </element>
+            </td>
           </tr>
           </thead>
         </table>      
