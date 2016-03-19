@@ -34,6 +34,10 @@ $("#findEvent").click(function(){
   $("#findSection").modal('hide');
 })
 
+$("#addEvent").click(function(){
+  $("#eventDiv").show();
+  $("#createSection").modal('hide');
+})
 
 // //Create a Hangout! button click.
 // $("#createButton").click(function(){
