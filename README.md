@@ -14,3 +14,4 @@ Screenshots:
 - ![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 - ![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 - ![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+- Use these tags to post screenshots that are pushed to master branch.
