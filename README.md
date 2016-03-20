@@ -7,6 +7,7 @@ HTML, CSS, Bootswatch, jQuery, Javascript, moment.js(momentarily), Firebase, (na
 Screenshots
 - (1)
 - (2)
+- (3)
 
 HTML, CSS, Bootswatch, jQuery, Javascript, moment.js(momentarily), Firebase, (name) weather API, (name) pie chart API, moment.js(momentarily).
 
