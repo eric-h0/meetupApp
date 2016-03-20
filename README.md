@@ -12,7 +12,7 @@ Screenshots
 HTML, CSS, Bootswatch, jQuery, Javascript, moment.js(momentarily), Firebase, (name) weather API, (name) pie chart API, moment.js(momentarily).
 
 Screenshots:
-- ![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
+- ![alt tag](https://raw.githubusercontent.com/eric-h0/meetUpApp/master/screenshots/1.png)
 - ![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 - ![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
 - Use these tags to post screenshots that are pushed to master branch.
