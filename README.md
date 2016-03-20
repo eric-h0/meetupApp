@@ -13,10 +13,5 @@ HTML, CSS, Bootswatch, jQuery, Javascript, moment.js(momentarily), Firebase, (na
 
 Screenshots:
 - ![alt tag](https://raw.githubusercontent.com/eric-h0/meetUpApp/master/screenshots/1.png)
-- ![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
-- ![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png)
-- Use these tags to post screenshots that are pushed to master branch.
-
-<!-- Testing to see how the branching works in github. -->
-<!-- Testing again. -->
-<!-- Testing this one more time, just to be sure that I have the gist of it. -->
+- ![alt tag](https://raw.githubusercontent.com/eric-h0/meetUpApp/master/screenshots/2.png)
+- ![alt tag](https://raw.githubusercontent.com/eric-h0/meetUpApp/master/screenshots/3.png)
