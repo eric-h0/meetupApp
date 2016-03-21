@@ -13,10 +13,10 @@ https://ru-going.herokuapp.com
 </span>
 </p>
 
-## Description
+## Description:
 An app created for Rutgers Students create group events with their fellow classmates. Design was created with mobile platforms in mind.
 
-## Languages, API's, and other sorts of magic used
+## Languages, API's, and other sorts of magic used:
 
 * HTML5
 * CSS3
