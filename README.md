@@ -22,3 +22,8 @@ An app created for Rutgers Students create group events with their fellow classm
 - <img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/1.png" width="400px" height="auto"/>
 - <img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/2.png" width="400px" height="auto"/>
 - <img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/3.png" width="400px" height="auto"/>
+
+<p align="center">
+&copy; Ninth Mystery Productions
+</p>
+
