@@ -6,10 +6,10 @@ https://ru-going.herokuapp.com
 ## Screenshots (taken from iPhone 6s Plus):
 <p align="center">
 <span>
-<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/4.png" width="24%" height="auto" align="center"/>
-<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/1.png" width="24%" height="auto" align="center"/>
-<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/2.png" width="24%" height="auto" align="center"/>
-<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/3.png" width="24%" height="auto" align="center"/>
+<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/screenshots/screenshots/4.png" width="24%" height="auto" align="center"/>
+<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/screenshots/screenshots/1.png" width="24%" height="auto" align="center"/>
+<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/screenshots/screenshots/2.png" width="24%" height="auto" align="center"/>
+<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/screenshots/screenshots/3.png" width="24%" height="auto" align="center"/>
 </span>
 </p>
 
