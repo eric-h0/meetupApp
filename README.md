@@ -5,9 +5,10 @@ https://ru-going.herokuapp.com
 
 ## Screenshots (taken from iPhone 6s Plus):
 <p align="center">
-<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/1.png" width="33%" height="auto" align="center"/>
-<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/2.png" width="33%" height="auto" align="center"/>
-<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/3.png" width="33%" height="auto" align="center"/>
+<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/4.png" width="25%" height="auto" align="center"/>
+<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/1.png" width="25%" height="auto" align="center"/>
+<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/2.png" width="25%" height="auto" align="center"/>
+<img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/3.png" width="25%" height="auto" align="center"/>
 </p>
 
 ## Description
@@ -27,7 +28,6 @@ An app created for Rutgers Students create group events with their fellow classm
 
 
 <br><br><br>
-
 
 
 <p align="center">
