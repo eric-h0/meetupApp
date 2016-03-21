@@ -19,9 +19,10 @@ An app created for Rutgers Students create group events with their fellow classm
 * (name) pie chart API
 
 ## Screenshots (taken from iPhone 6s Plus):
-- <img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/1.png" width="400px" height="auto"/>
-- <img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/2.png" width="400px" height="auto"/>
-- <img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/3.png" width="400px" height="auto"/>
+
+- <img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/1.png" width="400px" height="auto" align="center"/>
+- <img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/2.png" width="400px" height="auto" align="center"/>
+- <img src="https://raw.githubusercontent.com/eric-h0/meetupApp/master/screenshots/3.png" width="400px" height="auto" align="center"/>
 
 <p align="center">
 &copy; Ninth Mystery Productions
