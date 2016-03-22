@@ -99,7 +99,7 @@ $("#eventJoin").click(function(){
 });
 
 //Aaron's awesome weather section
-var queryURL = "http://api.wunderground.com/api/c594801c0edbc586/conditions/q/NJ/New_Brunswick.json";
+var queryURL = "https://api.wunderground.com/api/c594801c0edbc586/conditions/q/NJ/New_Brunswick.json";
 
 $.ajax({url: queryURL, method: 'GET'})
 .done(function(response){
