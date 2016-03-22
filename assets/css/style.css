@@ -95,11 +95,6 @@ h1 {
 width : 100%;
 clear : right;
 height: 70px;
-
-/*     display: flex;
-  justify-content: center;
-  align-content: flex-start;*/
-/*background-color: blue;*/
 display        : flex;
 justify-content: space-between;
 margin         : 0 auto;
@@ -133,4 +128,34 @@ margin         : 0 auto;
 
 #closeEvent {
   width: 100%;
+}
+
+
+.well {
+  width: 250px;
+  height: 300px;
+  float: left;
+  margin-right: 15px;
+}
+
+
+.required sup {
+  color:red;
+
+}
+
+#eventDescription {
+  text-wrap:normal;
+  
+}
+
+#remove {
+  float: right;
+  background-color: black;
+  /*padding: 4px;*/
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 2px;
 }

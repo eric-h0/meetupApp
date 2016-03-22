@@ -22,6 +22,9 @@
   <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Custom Javascript (mariah) -->
+  <script src="assets/javascript/javascript.js"></script>
+
   <title>RU Going?</title>
   <!-- Pie Chart CDN -->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -33,6 +36,11 @@
 
   <!-- R U Going Header -->
   <h1 align="center" id="homeButton"><img src="assets/images/rutgers.png" height="70" width="auto">U Going?</h1><br><br>
+
+<!-- MARIAH'S HTML ADDED -->
+<!-- This holds all the events people post -->
+<div id="testdiv"></div>
+<!-- END MARIAH'S HTML ADDED -->
 
   <!-- Container for search or create prompt #findButton #createButton -->
   <div id="welcomeCenter" align="center">
@@ -122,7 +130,6 @@
   </div>
 
   <!-- Container for Find -->
-  <!-- MODAL. USE THIS. -->
   <div id="findSection" class="modal fade" role="dialog">
     <div class="modal-dialog">
 
@@ -135,7 +142,7 @@
         <div class="modal-body">
             <label for="select">Which campus would you like to visit?</label>
               <div class="form-group">
-                    <select class="form-control eventLocation">
+                    <select class="form-control eventLocation" id="selectLocation">
                       <option>Busch</option>
                       <option>College Avenue</option>
                       <option>Cook</option>
@@ -146,7 +153,7 @@
               </div><br>
             <label for="select">What would you like to do?</label>
               <div class="form-group">
-                    <select class="form-control eventCat">
+                    <select class="form-control eventCat" id="selectCategory">
                       <option>Bars</option>
                       <option>Food</option>
                       <option>Hangout</option>
