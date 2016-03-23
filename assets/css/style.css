@@ -159,3 +159,50 @@ margin         : 0 auto;
   vertical-align: middle;
   padding-top: 2px;
 }
+/*Leslie's css*/
+#chat-container, #loginform {
+    margin:0 auto;
+    padding-bottom:25px;
+    background:gray;
+    opacity:;
+    width:350px;
+    height:350px;
+    border:1px solid black;
+    margin-top:50px;
+    margin-bottom:50px;
+    float:right; 
+    margin-right:10px;}
+  
+/*#loginform { padding-top:18px; }
+  
+    #loginform p { margin: 5px; }*/
+  #username{color:white;
+    text-align:center;
+    padding:10px;
+  /*border:1px solid black;*/}
+.chat-messages {
+    text-align:left;
+    margin:0 auto;
+    margin-bottom:50px;
+    padding:10px;
+    background:white;
+    height:200px;
+    width:250px;
+    border:1px solid black;
+    overflow:auto;
+    color:black; }
+  
+#messageInput {
+    width:200px;
+    height:20px;
+    border:1px solid black;
+    margin-bottom:10px; }
+  .messages{
+    margin-top:-10px;
+  }
+
+  
+#menu { padding:12.5px 25px 12.5px 25px; }
+  
+.msgln { margin:0 0 2px 0; 
+}
