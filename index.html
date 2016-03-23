@@ -24,7 +24,8 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- Custom Javascript (mariah) -->
   <script src="assets/javascript/javascript.js"></script>
-
+  <!--Animate CSS-->
+  <link rel="stylesheet" href="assets/css/animate.css">
   <title>RU Going?</title>
   <!-- Pie Chart CDN -->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -35,19 +36,19 @@
 <div class="container"><br><br>
 
   <!-- R U Going Header -->
-  <h1 align="center" id="homeButton"><img src="assets/images/rutgers.png" height="70" width="auto">U Going?</h1><br><br>
+  <h1 align="center" id="homeButton" class="animated slideInDown"><img src="assets/images/rutgers.png" height="70" width="auto">U Going?</h1><br><br>
 
 <!-- MARIAH'S HTML ADDED -->
 <!-- This holds all the events people post -->
-<div id="testdiv"></div>
+<div id="testdiv"class="animated fadeInDown"></div>
 <!-- END MARIAH'S HTML ADDED -->
 
   <!-- Container for search or create prompt #findButton #createButton -->
   <div id="welcomeCenter" align="center">
-      <a href="#" class="btn btn-default btn-lg btn-block" id="findButton" data-toggle="modal" data-target="#findSection">Find a Hangout!</a><br><br>
-      <a href="#" class="btn btn-default btn-lg btn-block" id="createButton"
+      <a href="#" class="btn btn-default btn-lg btn-block animated fadeInDown" id="findButton" data-toggle="modal" data-target="#findSection">Find a Hangout!</a><br><br>
+      <a href="#" class="btn btn-default btn-lg btn-block animated fadeInDown" id="createButton"
       data-toggle="modal" data-target="#createSection">Create Your Own!</a><br>
-      <element id='pieHeader'>Where's the action?</element>
+      <element id='pieHeader' class="ainmated fadeInDown">Where's the action?</element>
       <div style="width:400; height:300" id="chart_div"></div><br><br>
   </div>
 
@@ -60,28 +61,28 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Create Your Event</h4>
+          <h4 class="modal-title ainmated fadeInDown">Create Your Event</h4>
         </div>
         <div class="modal-body">
             
             <div class="form-group">
 
             <!-- <div class="addEventForm"> -->
-              <label class="control-label" for="focusedInput">Event Info:&nbsp;&nbsp;</label>
+              <label class="control-label animated fadeInDown" for="focusedInput">Event Info:&nbsp;&nbsp;</label>
               <div class="infoOneLine">
                 <div class="oneLine" style="margin-left: 0;">  
                   
-                  <input class="form-control eventName"  id="focusedInput" type="text" value="" placeholder="Event Name">
+                  <input class="form-control eventName animated fadeInDown"  id="focusedInput" type="text" value="" placeholder="Event Name">
                   <br> 
               </div> <!-- end event name -->
                 <div class="oneLine">
-                   <label class="control-label" for="focusedInput">&nbsp;&nbsp;</label>
-                  <input class="form-control eventDate"  id="focusedInput" type="date" value="" placeholder="Date">
+                   <label class="control-label animated fadeInDown" for="focusedInput">&nbsp;&nbsp;</label>
+                  <input class="form-control eventDate animated fadeInDown"  id="focusedInput" type="date" value="" placeholder="Date">
                 </div> <!-- end Date input -->
          
                 <div class="oneLine">
-                   <label class="control-label" for="focusedInput">&nbsp;&nbsp;</label>
-                  <input class="form-control eventTime"  id="focusedInput" type="time" value="" placeholder="Time">
+                   <label class="control-label animated fadeInDown" for="focusedInput">&nbsp;&nbsp;</label>
+                  <input class="form-control eventTime animated fadeInDown"  id="focusedInput" type="time" value="" placeholder="Time">
                 </div> <!-- end Time input -->
                  
               </div>     <!-- end oneLine, this will make it so these 3 boxes appear on one line -->       
@@ -89,7 +90,7 @@
             <br>
 
             <label for="select">What category best describes your event?</label>
-              <div class="form-group">
+              <div class="form-group animated fadeInDown">
                     <select class="form-control eventCat">
                       <option>Bars</option>
                       <option>Food</option>
@@ -102,7 +103,7 @@
               </div><br>
 
              <label for="select">Where is your event located?</label>
-              <div class="form-group">
+              <div class="form-group animated fadeInDown">
                     <select class="form-control eventLocation">
                       <option>Busch</option>
                       <option>College Avenue</option>
@@ -113,13 +114,13 @@
                     </select>
               </div><br>
 
-            <label class="control-label" for="focusedInput">Tell us about it:</label>
-            <textarea class="form-control eventDescription"  id="focusedInput" type="text" value="" placeholder="What's going down?"></textarea>
+            <label class="control-label animated fadeInDown" for="focusedInput">Tell us about it:</label>
+            <textarea class="form-control eventDescription animated fadeInDown"  id="focusedInput" type="text" value="" placeholder="What's going down?"></textarea>
 
 
         </div>
         <div class="modal-footer">
-            <button type="submit" id="addEvent" class="btn btn-default">Add Event</button> <br> <br>
+            <button type="submit" id="addEvent" class="btn btn-default animated bounce">Add Event</button> <br> <br>
 
       <!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
        -->
@@ -137,11 +138,11 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Find Your Event</h4>
+          <h4 class="modal-title animated fadeInDown">Find Your Event</h4>
         </div>
         <div class="modal-body">
-            <label for="select">Which campus would you like to visit?</label>
-              <div class="form-group">
+            <label for="select" class="animated fadeInDown">Which campus would you like to visit?</label>
+              <div class="form-group animated fadeInDown">
                     <select class="form-control eventLocation" id="selectLocation">
                       <option>Busch</option>
                       <option>College Avenue</option>
@@ -151,8 +152,8 @@
                       <option>Off-campus</option>
                     </select>
               </div><br>
-            <label for="select">What would you like to do?</label>
-              <div class="form-group">
+            <label for="select" class="animated fadeInDown">What would you like to do?</label>
+              <div class="form-group animated fadeInDown">
                     <select class="form-control eventCat" id="selectCategory">
                       <option>Bars</option>
                       <option>Food</option>
@@ -166,7 +167,7 @@
 
         </div>
         <div class="modal-footer">
-            <button type="submit" id="findEvent" class="btn btn-default">Find Event</button> <br> <br>
+            <button type="submit" id="findEvent" class="btn btn-default ainmated bounce">Find Event</button> <br> <br>
 
       <!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
        -->
@@ -221,7 +222,20 @@
       </div>
       
       <!-- CHAT GOES HERE. -->
-
+    <div id="chat-container" class="animated slideInDown">
+      <header>RU Going? Chat</header>
+        <div id="menu">
+          </div>
+        <div class='chat-menu'>
+          <label for="nameInput" class="username">Username:</label>
+          <input type='text' id='nameInput' placeholder='Enter a Username...'>
+        <ul id='messages' class="chat-messages"></ul>
+          <label for="nameInput" class="messages">Message:</label>
+          <input type='text' id='messageInput'  placeholder='Type a Message...'>
+  </div>
+</div>
+  </div>
+</div> 
   </div>
 </div>
 <!-- ^Container -->
@@ -244,7 +258,7 @@
 </div>
 
 <!-- Footer -->
-<footer>&copy; Ninth Mystery Productions</footer>
+<footer class="aimated stretchIn">&copy; Ninth Mystery Productions</footer>
 
 <script src="assets/javascript/logic.js"></script>
 </body>
