@@ -132,10 +132,10 @@ margin         : 0 auto;
 
 
 .well {
-  width: 250px;
-  height: 300px;
+  width: 225px;
+  height: 225px;
   float: left;
-  margin-right: 15px;
+  margin-right: 25px;
 }
 
 
@@ -158,4 +158,11 @@ margin         : 0 auto;
   text-align: center;
   vertical-align: middle;
   padding-top: 2px;
+}
+
+#twitter {
+  /*float: right;*/
+  display: none;
+  /*margin-left: 30px;*/
+  
 }
