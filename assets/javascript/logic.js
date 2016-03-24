@@ -284,10 +284,10 @@ function drawChart() {
     data.addColumn('string', 'Topping');
     data.addColumn('number', 'Slices');
     data.addRows([
-        ['College Ave.', 88],
-        ['Busch', 32],
+        ['College Ave.', 23],
+        ['Busch', 10],
         ['Cook/Douglass', 12],
-        ['Livingston', 59]
+        ['Livingston', 19]
     ]);
 
     // Set chart options
