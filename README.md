@@ -13,13 +13,13 @@ https://ru-going.herokuapp.com
 </span>
 </p>
 
-## Screenshots (Taken from Macbook Pro):
+## Screenshot (Taken from Macbook Pro):
 <p align="center">
 <img src="https://raw.githubusercontent.com/eric-h0/meetupApp/screenshots/screenshots/mac1.png" width="100%" height="auto" align="center"/>
 </p>
 
 ## Description:
-An app created for Rutgers Students create group events with their fellow classmates. Design was created with mobile platforms in mind.
+An app created for Rutgers Students to create group events with their fellow classmates. Design was created with mobile platforms in mind.
 
 ## Languages, API's, and other sorts of magic used:
 
