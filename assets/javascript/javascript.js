@@ -11,18 +11,35 @@ $( document ).ready(function() {
 	var location = "";	
 	var eventsRef = dataRef.child("events");
 
-		//when click X to remove a post: doesnt quite work yet.
-		$(document).on('click', '#remove', function(){
-			// alert('hi');
-			// $(this.parent).hide();
-		});
+    //when you click x on post, removes div and child from firebase
+    $(document).on('click', '#remove', function() {
+    	//makes div disappear
+    	$(this).parent().hide();
 
-	
-	
+    	//when clicking to remove event, asks for security question. not finished
+    	// var security = prompt('Security Question: What\'s your favorite food?');
+
+
+    	//targets the child name by finding it in the well div class 
+    	//(huge workaround to target child to delete the node on click)
+        var target = $(this).parent('div').attr('id');
+
+        
+
+        //function to remove node on click
+        ref.on("value", function(snapshot) {
+            eventsRef.child(target).remove();
+
+        });
+    }); //end remove click function
 
 
 	//button to add your own event:
 	$('#addEvent').on('click', function (){
+
+    //onload, twitter will not show until you enter queries
+    $("#twitter").toggle();
+
 
 	// Grabbed values from text boxes
 	eventName = $('.eventName').val().trim();
@@ -54,7 +71,7 @@ $( document ).ready(function() {
 	$('.location').val("");
 
 
-// TEST AREA TO ADD POST TO DIV AND OTHERS ASSOCIATED: 
+
 
 			 var category = $('.eventCat').val();
 			 var location = $('.eventLocation').val();
@@ -71,8 +88,7 @@ $( document ).ready(function() {
 			      if (catSort.category == category) {
 			      	$('#testdiv').append("<div class='well'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>"+snapshot.val().eventName+"</strong></h4>" +"</div><div id='eventDate'> "+"Date:&nbsp;&nbsp;"+snapshot.val().eventDate+" </div><div id='eventTime'> "+ "Time:&nbsp;&nbsp; " +snapshot.val().eventTime+" </div><div id='eventDescription'> "+"About the event:&nbsp;&nbsp;"+snapshot.val().eventDescription+" <div id='category'> "+"Category:&nbsp;&nbsp;"+snapshot.val().category+" </div><div id='location'> "+"Campus:&nbsp;&nbsp;"+snapshot.val().location+"</div></div>");
 
-			          console
-.log(catSort);
+			          console.log(catSort);
 
 
 			          //this will hide the form when a user clicks 'lets go' so that only the results will show up
@@ -83,7 +99,7 @@ $( document ).ready(function() {
 
 
 
-// END TEST AREA ===================
+
 
 
 	//closes modal --DONT NEED. 
