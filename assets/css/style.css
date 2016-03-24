@@ -55,6 +55,11 @@ h1 {
   font-size       : 25px;
 }
 
+#createSection {
+  position: fixed;
+  top: 20px;
+}
+
 #findSection {
   position: fixed;
   top: 150px;
