@@ -1,3 +1,5 @@
+
+
 //Hides Divs
 $("#createSection").hide();
 $("#eventDiv").hide();
