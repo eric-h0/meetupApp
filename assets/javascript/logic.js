@@ -164,7 +164,7 @@ $("#weather").append(temp + "&#8457"+ "<br>");
     //ADD MESSAGE
     messageList.append(messageElement)
 
-    //messageList[0].scrollTop = messageList[0].scrollHeight;
+    messageList[0].scrollTop = messageList[0].scrollHeight;
 
   });
 
