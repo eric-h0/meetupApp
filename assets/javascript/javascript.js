@@ -115,7 +115,7 @@ $( document ).ready(function() {
 
     //click on find a hangout button to retrieve info based on two parameters of location/category
 	$('#findEvent').on('click', function(){
-
+<button type="button" class="close" data-dismiss="modal">&times;</button>
 
 			
 			 var category = $('#selectCategory').val();

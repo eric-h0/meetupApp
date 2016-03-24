@@ -48,6 +48,12 @@ $(".close").click(function(){
   $("#welcomeCenter").show();
 })
 
+$("#close").click(function(){
+  $("#findSection").hide();
+  $("#createSection").hide();
+  $("#welcomeCenter").show();
+})
+
 // //Create a Hangout! button click.
 // $("#createButton").click(function(){
 //   $("#createSection").show();
