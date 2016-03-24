@@ -11,14 +11,27 @@ $( document ).ready(function() {
 	var location = "";	
 	var eventsRef = dataRef.child("events");
 
-		//when click X to remove a post: doesnt quite work yet.
-		$(document).on('click', '#remove', function(){
-			// alert('hi');
-			// $(this.parent).hide();
-		});
+    //when you click x on post, removes div and child from firebase
+    $(document).on('click', '#remove', function() {
+    	//makes div disappear
+    	$(this).parent().hide();
 
-	
-	
+    	//when clicking to remove event, asks for security question. not finished
+    	// var security = prompt('Security Question: What\'s your favorite food?');
+
+
+    	//targets the child name by finding it in the well div class 
+    	//(huge workaround to target child to delete the node on click)
+        var target = $(this).parent('div').attr('id');
+
+        
+
+        //function to remove node on click
+        ref.on("value", function(snapshot) {
+            eventsRef.child(target).remove();
+
+        });
+    }); //end remove click function
 
 
 	//button to add your own event:
