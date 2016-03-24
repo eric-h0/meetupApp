@@ -142,7 +142,7 @@ $("#weather").append(temp + "&#8457"+ "<br>");
     var message        = data.text;
     var messageElement = $("<li>");
     var nameElement    = $("<b class='chat-username'></b>")
-    nameElement.text(username);
+    nameElement.text(username + ": ");
     messageElement.text(message).prepend(nameElement);
 
     //ADD MESSAGE
