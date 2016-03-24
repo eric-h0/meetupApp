@@ -1,5 +1,3 @@
-
-
 //Hides Divs
 $("#createSection").hide();
 $("#eventDiv").hide();
@@ -7,57 +5,57 @@ $("#findSection").hide();
 $("#createEventForm").hide();
 
 //Makes the RU Going? title a home button.
-$("#homeButton").click(function(){
-  $("#welcomeCenter").show();
-  $("#eventDiv").hide();
-  $("#findSection").hide();
-  $("#createEventForm").hide();
+$("#homeButton").click(function() {
+    $("#welcomeCenter").show();
+    $("#eventDiv").hide();
+    $("#findSection").hide();
+    $("#createEventForm").hide();
 });
 
 //Find a Hangout! button click.
-$("#findButton").click(function(){
-  $("#findSection").show();
-  $("#welcomeCenter").hide();
-    $("#backButton").click(function(){
-      $("#findSection").hide();
-      $("#welcomeCenter").show();
-      $("#eventDiv").hide();
+$("#findButton").click(function() {
+    $("#findSection").show();
+    $("#welcomeCenter").hide();
+    $("#backButton").click(function() {
+        $("#findSection").hide();
+        $("#welcomeCenter").show();
+        $("#eventDiv").hide();
     });
 });
 
 //Create a Hangout! button click.
-$("#createButton").click(function(){
-  $("#createEventForm").show();
-  $("#welcomeCenter").hide();
+$("#createButton").click(function() {
+    $("#createEventForm").show();
+    $("#welcomeCenter").hide();
 })
 
 //Find event button on modal.
-$("#findEvent").click(function(){
-  $("#eventDiv").show();
-  $("#findSection").modal('hide');
-  $("#close").click(function(){
-  $("#findSection").hide();
-  $("#createSection").hide();
-  $("#welcomeCenter").show();
-})
+$("#findEvent").click(function() {
+    $("#eventDiv").show();
+    $("#findSection").modal('hide');
+    $("#close").click(function() {
+        $("#findSection").hide();
+        $("#createSection").hide();
+        $("#welcomeCenter").show();
+    })
 })
 
 //Add event button on modal.
-$("#addEvent").click(function(){
-  $("#eventDiv").show();
-  $("#createSection").modal('hide');
-  $("#close").click(function(){
-  $("#findSection").hide();
-  $("#createSection").hide();
-  $("#welcomeCenter").show();
-})
+$("#addEvent").click(function() {
+    $("#eventDiv").show();
+    $("#createSection").modal('hide');
+    $("#close").click(function() {
+        $("#findSection").hide();
+        $("#createSection").hide();
+        $("#welcomeCenter").show();
+    })
 })
 
 //Close Button function.
-$(".close").click(function(){
-  $("#findSection").hide();
-  $("#createSection").hide();
-  $("#welcomeCenter").show();
+$(".close").click(function() {
+    $("#findSection").hide();
+    $("#createSection").hide();
+    $("#welcomeCenter").show();
 })
 
 // $("#close").click(function(){
@@ -78,88 +76,88 @@ $(".close").click(function(){
 // }); yep
 
 //Create Your Own! button click.
-$("#createButton").click(function(){
-  //Insert create inputs.
+$("#createButton").click(function() {
+    //Insert create inputs.
 });
 
 //Click function for Let's Go Button.
 $("#goButton").click(function() {
-  console.log(this);
+    console.log(this);
 
-  //Clicking the button hides the input boxes and buttons, it'll show the event divs that will be dynamically created based on input.
-  $("#findSection").hide();
-  //Shows eventDiv after submit is pressed.
-  $("#eventDiv").show();
-  //Find a way for specific content to show up based on inputs selected from the dropdown menu.
-  //eventDiv = #eventheader / #eventCreator / #eventTime / #eventJoin button.
-
-  $("#backButton").click(function(){
-    $("#eventDiv").hide();
-    $("#welcomeCenter").hide();
-    $("#findSection").show();
-  });
-
-  $("#forwardButton").click(function(){
-    $("#eventDiv").show();
+    //Clicking the button hides the input boxes and buttons, it'll show the event divs that will be dynamically created based on input.
     $("#findSection").hide();
-  });
+    //Shows eventDiv after submit is pressed.
+    $("#eventDiv").show();
+    //Find a way for specific content to show up based on inputs selected from the dropdown menu.
+    //eventDiv = #eventheader / #eventCreator / #eventTime / #eventJoin button.
+
+    $("#backButton").click(function() {
+        $("#eventDiv").hide();
+        $("#welcomeCenter").hide();
+        $("#findSection").show();
+    });
+
+    $("#forwardButton").click(function() {
+        $("#eventDiv").show();
+        $("#findSection").hide();
+    });
 });
 
 //Click function for join!
-$("#eventJoin").click(function(){
-  $("#eventDiv").hide();
+$("#eventJoin").click(function() {
+    $("#eventDiv").hide();
     //Back button functionality. Have to find a way to make this universal.
-    $("#backButton").click(function(){
-      $("#welcomeCenter").hide();
-      $("#findSection").hide();
-      $("#eventDiv").show();
+    $("#backButton").click(function() {
+        $("#welcomeCenter").hide();
+        $("#findSection").hide();
+        $("#eventDiv").show();
     });
 });
 
 //Aaron's awesome weather section
 var queryURL = "https://api.wunderground.com/api/c594801c0edbc586/conditions/q/NJ/New_Brunswick.json";
 
-$.ajax({url: queryURL, method: 'GET'})
-.done(function(response){
+$.ajax({ url: queryURL, method: 'GET' })
+    .done(function(response) {
 
-var city    = response.current_observation.display_location.city;
-var weather = response.current_observation.weather;
-var iconURL = response.current_observation.icon_url;
-var temp    = response.current_observation.temp_f;
+        var city = response.current_observation.display_location.city;
+        var weather = response.current_observation.weather;
+        var iconURL = response.current_observation.icon_url;
+        var temp = response.current_observation.temp_f;
 
-//append that shit to a div
-// $("#weather").append(city + "<br>");
-// $("#weather").append(weather + "<br>");
-$("#weather").append("<img src='"+iconURL+"'>");
-$("#weather").append(temp + "&#8457"+ "<br>");
-});
+        //append that shit to a div
+        // $("#weather").append(city + "<br>");
+        // $("#weather").append(weather + "<br>");
+        $("#weather").append("<img src='" + iconURL + "'>");
+        $("#weather").append(temp + "&#8457" + "<br>");
+    });
 
 //Leslie's awesome chat section
-  var messagesRef  = new Firebase('https://ninthmysterychat.firebaseio.com/');
-  var messageField = $('#messageInput');
-  var nameField    = $('#nameInput');
-  var messageList  = $('#messages');
-  
-  messageField.keypress(function (e) {
+var messagesRef = new Firebase('https://ninthmysterychat.firebaseio.com/');
+var messageField = $('#messageInput');
+var nameField = $('#nameInput');
+var messageList = $('#messages');
+
+messageField.keypress(function(e) {
     if (e.keyCode == 13) {
-      //FIELD VALUES
-      var username = nameField.val().trim();
-      var message  = messageField.val().trim();
+        //FIELD VALUES
+        var username = nameField.val().trim();
+        var message = messageField.val().trim();
 
-      //SAVE DATA TO FIREBASE AND EMPTY FIELD
-      messagesRef.push({name:username, text:message});
-      messageField.val(name);
-    } 
-   
-  });
+        //SAVE DATA TO FIREBASE AND EMPTY FIELD
+        messagesRef.push({ name: username, text: message });
+        messageField.val(name);
+    }
 
-  messagesRef.limitToLast(10).on('child_added', function (snapshot) {
+});
+
+messagesRef.limitToLast(10).on('child_added', function(snapshot) {
     //GET DATA
-    var data           = snapshot.val();
-    var username       = data.name || "anonymous";
-    var message        = data.text;
+    var data = snapshot.val();
+    var username = data.name || "anonymous";
+    var message = data.text;
     var messageElement = $("<li>");
-    var nameElement    = $("<b class='chat-username'></b>")
+    var nameElement = $("<b class='chat-username'></b>")
     nameElement.text(username + ": ");
     messageElement.text(message).prepend(nameElement);
 
@@ -168,9 +166,9 @@ $("#weather").append(temp + "&#8457"+ "<br>");
 
     messageList[0].scrollTop = messageList[0].scrollHeight;
 
-  });
+});
 
- //=========START MARIAH'S PREVIOUS JAVASCRIPT ====== 
+//=========START MARIAH'S PREVIOUS JAVASCRIPT ====== 
 
 // $( document ).ready(function() {
 //   var url ='https://rcb-mm-app.firebaseio.com/';
@@ -232,9 +230,9 @@ $("#weather").append(temp + "&#8457"+ "<br>");
 //   console.log(childSnapshot.val().eventDescription);
 //   console.log(childSnapshot.val().category);
 //   console.log(childSnapshot.val().location)
-  
+
 //   // full list of items to the well
-    
+
 //     // var newEntry = $('<div>');
 
 
@@ -264,50 +262,53 @@ $("#weather").append(temp + "&#8457"+ "<br>");
 
 // }); //end doc on ready
 
- 
+
 // $('#createEventForm').hide();
 
 //=========END MARIAH'S PREVIOUS JAVASCRIPT ======
 
 //Aaron's pie chart
-      // Load the Visualization API and the piechart package.
-      google.load('visualization', '1.0', {'packages':['corechart']});
+// Load the Visualization API and the piechart package.
+google.load('visualization', '1.0', { 'packages': ['corechart'] });
 
-      // Set a callback to run when the Google Visualization API is loaded.
-      google.setOnLoadCallback(drawChart);
+// Set a callback to run when the Google Visualization API is loaded.
+google.setOnLoadCallback(drawChart);
 
-      // Callback that creates and populates a data table, 
-      // instantiates the pie chart, passes in the data and
-      // draws it.
-      function drawChart() {
+// Callback that creates and populates a data table, 
+// instantiates the pie chart, passes in the data and
+// draws it.
+function drawChart() {
 
-      // Create the data table.
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Topping');
-      data.addColumn('number', 'Slices');
-      data.addRows([
+    // Create the data table.
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'Topping');
+    data.addColumn('number', 'Slices');
+    data.addRows([
         ['College Ave.', 88],
         ['Busch', 32],
-        ['Cook/Douglass', 12], 
+        ['Cook/Douglass', 12],
         ['Livingston', 59]
-      ]);
+    ]);
 
-      // Set chart options
-      var options = {  width: 400,
-                        height: 240,
-                        // title: 'Where\'s the action?',
-                        colors: ['red', '#2f2f2f', 'grey', 'lightgrey'],
-                        is3D: true,
-                        backgroundColor: 'black',
-                        pieSliceText: 'value',
-                        titleTextStyle:{ color: 'white',
-                                      fontSize: 20,
-                                      bold: false,
-                                      italic: false},
-                        legend: {position: 'right', textStyle: {color: 'white', fontSize: 12}}
-                      };
+    // Set chart options
+    var options = {
+        width: 400,
+        height: 240,
+        // title: 'Where\'s the action?',
+        colors: ['red', '#2f2f2f', 'grey', 'lightgrey'],
+        is3D: true,
+        backgroundColor: 'black',
+        pieSliceText: 'value',
+        titleTextStyle: {
+            color: 'white',
+            fontSize: 20,
+            bold: false,
+            italic: false
+        },
+        legend: { position: 'right', textStyle: { color: 'white', fontSize: 12 } }
+    };
 
-      // Instantiate and draw our chart, passing in some options.
-      var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-      chart.draw(data, options);
-    }
+    // Instantiate and draw our chart, passing in some options.
+    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+}

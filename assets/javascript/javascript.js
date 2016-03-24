@@ -71,7 +71,8 @@ $( document ).ready(function() {
 			      if (catSort.category == category) {
 			      	$('#testdiv').append("<div class='well'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>"+snapshot.val().eventName+"</strong></h4>" +"</div><div id='eventDate'> "+"Date:&nbsp;&nbsp;"+snapshot.val().eventDate+" </div><div id='eventTime'> "+ "Time:&nbsp;&nbsp; " +snapshot.val().eventTime+" </div><div id='eventDescription'> "+"About the event:&nbsp;&nbsp;"+snapshot.val().eventDescription+" <div id='category'> "+"Category:&nbsp;&nbsp;"+snapshot.val().category+" </div><div id='location'> "+"Campus:&nbsp;&nbsp;"+snapshot.val().location+"</div></div>");
 
-			          console.log(catSort);
+			          console
+.log(catSort);
 
 
 			          //this will hide the form when a user clicks 'lets go' so that only the results will show up
