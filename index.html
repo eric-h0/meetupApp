@@ -83,8 +83,8 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Create Your Event</h4>
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <h4 class="modal-title" align="center">Create Your Event</h4>
         </div>
         <div class="modal-body">
             
@@ -96,7 +96,6 @@
                 <div class="oneLine" style="margin-left: 0;">  
                   
                   <input class="form-control eventName"  id="focusedInput" type="text" value="" placeholder="Event Name">
-                  <br> 
               </div> <!-- end event name -->
                 <div class="oneLine">
                    <label class="control-label" for="focusedInput">&nbsp;&nbsp;</label>
@@ -110,7 +109,6 @@
                  
               </div>     <!-- end oneLine, this will make it so these 3 boxes appear on one line -->       
             </div> <!-- end addEventForm -->
-            <br>
 
             <label for="select">What category best describes your event?</label>
               <div class="form-group">
@@ -145,8 +143,8 @@
         <div class="modal-footer">
             <button type="submit" id="addEvent" class="btn btn-default">Add Event</button> <br> <br>
 
-      <!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
-       -->
+                  <button type="button" id="closeEvent" class="close" data-dismiss="modal">Close</button>
+      
         </div>
       </div>
 
@@ -160,8 +158,8 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Find Your Event</h4>
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+          <h4 class="modal-title" align="center">Find Your Event</h4>
         </div>
         <div class="modal-body">
             <label for="select">Which campus would you like to visit?</label>
@@ -192,8 +190,8 @@
         <div class="modal-footer">
             <button type="submit" id="findEvent" class="btn btn-default">Find Event</button> <br> <br>
 
-      <!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
-       -->
+                  <button type="button" id="closeEvent" class="close" data-dismiss="modal">Close</button>
+      
         </div>
       </div>
 
@@ -204,7 +202,7 @@
   <!-- Container for event divs #eventDiv -->
   <div id="eventDiv">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <element id = "eventHeader"><h4>Post-Exam Stress Release at Knight Club</h4></element>
+      <element id = "eventHeader"><h4><!-- Post-Exam Stress Release at Knight Club --></h4></element>
         <!-- Prepopulated image -->
         <!-- <img src="assets/images/knightClub.jpg"><br> -->
 
@@ -241,7 +239,7 @@
         </table>      
       
       <!-- Join this hangout button -->
-      <a href="#" id = "eventJoin" class="btn btn-default">Join this hangout</a><br><br><br><br>
+      <a href="#" id = "eventJoin" class="btn btn-default" style="hidden">Join this hangout</a><br><br><br><br>
       </div>
       
       <!-- CHAT GOES HERE. -->
