@@ -24,22 +24,20 @@
   <link rel="stylesheet" href="assets/css/style.css">
   <!-- Custom Javascript (mariah) -->
   <script src="assets/javascript/javascript.js"></script>
-  <!--Animate CSS-->
-  <link rel="stylesheet" href="assets/css/animate.css">
+
   <title>RU Going?</title>
   <!-- Pie Chart CDN -->
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 </head>
 <body>
+<!-- adding a comment here so that I can test it -->
 <!-- Container -->  
 <div class="container"><br><br>
+
   <!-- R U Going Header -->
-  <h1 align="center" id="homeButton" class="animated slideInDown"><img src="assets/images/rutgers.png" height="70" width="auto">U Going?</h1><br><br>
+  <h1 align="center" id="homeButton"><img src="assets/images/rutgers.png" height="70" width="auto">U Going?</h1><br><br>
 
 <!-- MARIAH'S HTML ADDED -->
-<!-- This holds all the events people post -->
-<div id="testdiv"class="animated fadeInDown"></div>
-
 <!-- adding twitter and div into a row -->
 
   <div class="row">
@@ -64,16 +62,17 @@
   </div> <!-- end row -->
 
 
+
+
 <!-- END MARIAH'S HTML ADDED -->
 
   <!-- Container for search or create prompt #findButton #createButton -->
   <div id="welcomeCenter" align="center">
-      <a href="#" class="btn btn-default btn-lg btn-block animated fadeInDown" id="findButton" data-toggle="modal" data-target="#findSection">Find a Hangout!</a><br><br>
-      <a href="#" class="btn btn-default btn-lg btn-block animated fadeInDown" id="createButton"
+      <a href="#" class="btn btn-default btn-lg btn-block" id="findButton" data-toggle="modal" data-target="#findSection">Find a Hangout!</a><br><br>
+      <a href="#" class="btn btn-default btn-lg btn-block" id="createButton"
       data-toggle="modal" data-target="#createSection">Create Your Own!</a><br>
-      <element id='pieHeader' class="animated fadeInDown">Where's the action?</element>
-      <div style="width:400; height:300" id="chart_div"></div>
-      <br><br>
+      <element id='pieHeader'>Where's the action?</element>
+      <div style="width:400; height:300" id="chart_div"></div><br><br>
   </div>
 
   <!-- Container for Create -->
@@ -84,35 +83,37 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <!-- <button type="button" class="close" align="right" data-dismiss="modal">&times;</button> -->
-          <h4 class="modal-title animated fadeInDown" align="center">Create Your Event</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Create Your Event</h4>
         </div>
         <div class="modal-body">
             
             <div class="form-group">
 
             <!-- <div class="addEventForm"> -->
-              <label class="control-label animated fadeInDown" for="focusedInput">Event Info:</label>
+              <label class="control-label" for="focusedInput">Event Info:&nbsp;&nbsp;</label>
               <div class="infoOneLine">
                 <div class="oneLine" style="margin-left: 0;">  
                   
-                  <input class="form-control eventName animated fadeInDown"  id="focusedInput" type="text" value="" placeholder="Event Name">
+                  <input class="form-control eventName"  id="focusedInput" type="text" value="" placeholder="Event Name">
+                  <br> 
               </div> <!-- end event name -->
                 <div class="oneLine">
-                   <label class="control-label animated fadeInDown" for="focusedInput"></label>
-                  <input class="form-control eventDate animated fadeInDown"  id="focusedInput" type="date" value="" placeholder="Date">
+                   <label class="control-label" for="focusedInput">&nbsp;&nbsp;</label>
+                  <input class="form-control eventDate"  id="focusedInput" type="date" value="" placeholder="Date">
                 </div> <!-- end Date input -->
          
                 <div class="oneLine">
-                   <label class="control-label animated fadeInDown" for="focusedInput"></label>
-                  <input class="form-control eventTime animated fadeInDown"  id="focusedInput" type="time" value="" placeholder="Time">
+                   <label class="control-label" for="focusedInput">&nbsp;&nbsp;</label>
+                  <input class="form-control eventTime"  id="focusedInput" type="time" value="" placeholder="Time">
                 </div> <!-- end Time input -->
                  
               </div>     <!-- end oneLine, this will make it so these 3 boxes appear on one line -->       
             </div> <!-- end addEventForm -->
+            <br>
 
             <label for="select">What category best describes your event?</label>
-              <div class="form-group animated fadeInDown">
+              <div class="form-group">
                     <select class="form-control eventCat">
                       <option>Bars</option>
                       <option>Food</option>
@@ -125,7 +126,7 @@
               </div><br>
 
              <label for="select">Where is your event located?</label>
-              <div class="form-group animated fadeInDown">
+              <div class="form-group">
                     <select class="form-control eventLocation">
                       <option>Busch</option>
                       <option>College Avenue</option>
@@ -136,16 +137,16 @@
                     </select>
               </div><br>
 
-            <label class="control-label animated fadeInDown" for="focusedInput">Tell us about it:</label>
-            <textarea class="form-control eventDescription animated fadeInDown"  id="focusedInput" type="text" value="" placeholder="What's going down?"></textarea>
+            <label class="control-label" for="focusedInput">Tell us about it:</label>
+            <textarea class="form-control eventDescription"  id="focusedInput" type="text" value="" placeholder="What's going down?"></textarea>
 
 
         </div>
         <div class="modal-footer">
-            <button type="submit" id="addEvent" class="btn btn-default animated bounce">Add Event</button> <br> <br>
+            <button type="submit" id="addEvent" class="btn btn-default">Add Event</button> <br> <br>
 
-            <button type="button" class="close" class="btn btn-default" data-dismiss="modal">Close</button>
-      
+      <!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
+       -->
         </div>
       </div>
 
@@ -159,12 +160,12 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <!-- <button type="button" id="close" class="close" data-dismiss="modal">&times;</button> -->
-          <h4 class="modal-title animated fadeInDown" align="center">Find Your Event</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Find Your Event</h4>
         </div>
         <div class="modal-body">
-            <label for="select" class="animated fadeInDown">Which campus would you like to visit?</label>
-              <div class="form-group animated fadeInDown">
+            <label for="select">Which campus would you like to visit?</label>
+              <div class="form-group">
                     <select class="form-control eventLocation" id="selectLocation">
                       <option>Busch</option>
                       <option>College Avenue</option>
@@ -174,8 +175,8 @@
                       <option>Off-campus</option>
                     </select>
               </div><br>
-            <label for="select" class="animated fadeInDown">What would you like to do?</label>
-              <div class="form-group animated fadeInDown">
+            <label for="select">What would you like to do?</label>
+              <div class="form-group">
                     <select class="form-control eventCat" id="selectCategory">
                       <option>Bars</option>
                       <option>Food</option>
@@ -189,10 +190,7 @@
 
         </div>
         <div class="modal-footer">
-            <button type="submit" id="findEvent" class="btn btn-default animated bounce">Find Event</button> <br> <br>
-
-            <button type="button" class="close" class="btn btn-default" data-dismiss="modal">Close</button>
-
+            <button type="submit" id="findEvent" class="btn btn-default">Find Event</button> <br> <br>
 
       <!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
        -->
@@ -206,34 +204,32 @@
   <!-- Container for event divs #eventDiv -->
   <div id="eventDiv">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <element id = "eventHeader"><h4><!-- Post-Exam Stress Release at Knight Club --></h4></element>
-
-
+      <element id = "eventHeader"><h4>Post-Exam Stress Release at Knight Club</h4></element>
         <!-- Prepopulated image -->
-<!--         <img src="assets/images/knightClub.jpg"><br>
- -->
+        <!-- <img src="assets/images/knightClub.jpg"><br> -->
+
         <!-- Informational table -->
-        <!-- <table class="table table-striped table-hover">
+        <table class="table table-striped table-hover">
         <thead>
-          <tr> -->
+          <tr>
             <!-- Event Creator #eventCreator h6: css -->
-            <!-- <td>
+            <td>
               <element id= "eventCreator">
                 <h6>
                 Created by:<br>Eric Ho
                 </h6>
               </element>
-            </td> -->
+            </td>
             <!-- Weather -->
-            <!-- <td>
+            <td>
               <h6> 
-                <div id="weather"> -->
+                <div id="weather">
                 <!-- Weather info shoots here -->
-                <!-- </div>
+                </div>
               </h6>
-            </td> -->
+            </td>
             <!-- Event time #eventTime -->
-            <!-- <td>
+            <td>
               <element id = "eventTime">
                 <h6>
                 Event time:<br>11:00pm
@@ -242,31 +238,20 @@
             </td>
           </tr>
           </thead>
-        </table>   -->    
+        </table>      
       
       <!-- Join this hangout button -->
-      <!-- <a href="#" id = "eventJoin" class="btn btn-default" hidden>Join this hangout</a><br><br><br><br>
-      </div> -->
+      <a href="#" id = "eventJoin" class="btn btn-default">Join this hangout</a><br><br><br><br>
+      </div>
       
       <!-- CHAT GOES HERE. -->
-    <div id="chat-container" class="animated slideInDown" width="100%">
-      <header>RU Going? Chat</header>
-        <div id="menu">
-          </div>
-        <div class='chat-menu'>
-          <label for="nameInput" class="username">Username:</label>
-          <input type='text' id='nameInput' placeholder='Enter a Username...'>
-        <ul id='messages' class="chat-messages"></ul>
-          <label for="nameInput" class="messages">Message:</label>
-          <input type='text' id='messageInput'  placeholder='Type a Message...'>
-        </div>
+
   </div>
-    </div> <!-- End of row -->
-  </div> <!-- End of eventDiv -->
-  </div>
-  </div>
+</div>
 <!-- ^Container -->
+
 <!-- Nav Buttons -->
+<div></div>
 <div id="navButtons">
 <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
   <!-- empty -->
@@ -281,10 +266,10 @@
   <!-- empty -->
 </div>
 </div>
+
 <!-- Footer -->
-<footer class="aimated stretchIn">&copy; Ninth Mystery Productions</footer>
+<footer>&copy; Ninth Mystery Productions</footer>
 
 <script src="assets/javascript/logic.js"></script>
-
 </body>
 </html>
