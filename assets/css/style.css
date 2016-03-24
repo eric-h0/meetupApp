@@ -131,7 +131,7 @@ margin         : 0 auto;
     background-color: #ff0000
 }
 
-#close {
+.close {
   width: 100%;
 }
 

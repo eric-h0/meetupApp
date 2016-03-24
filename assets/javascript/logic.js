@@ -52,17 +52,17 @@ $("#addEvent").click(function(){
 })
 
 //Close Button function.
-// $(".close").click(function(){
-//   $("#findSection").hide();
-//   $("#createSection").hide();
-//   $("#welcomeCenter").show();
-// })
-
-$("#close").click(function(){
+$(".close").click(function(){
   $("#findSection").hide();
   $("#createSection").hide();
   $("#welcomeCenter").show();
 })
+
+// $("#close").click(function(){
+//   $("#findSection").hide();
+//   $("#createSection").hide();
+//   $("#welcomeCenter").show();
+// })
 
 // //Create a Hangout! button click.
 // $("#createButton").click(function(){
