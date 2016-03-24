@@ -12,7 +12,6 @@ https://ru-going.herokuapp.com
 <img src="https://raw.githubusercontent.com/eric-h0/meetupApp/screenshots/screenshots/3.png" width="24%" height="auto" align="center"/>
 </span>
 </p>
-<br>
 
 ## Screenshots (Taken from Macbook Pro):
 <p align="center">
