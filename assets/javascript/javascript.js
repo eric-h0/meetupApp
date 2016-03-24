@@ -17,10 +17,6 @@ $( document ).ready(function() {
 			// $(this.parent).hide();
 		});
 
-	
-	
-
-
 	//button to add your own event:
 	$('#addEvent').on('click', function (){
 
@@ -32,7 +28,6 @@ $( document ).ready(function() {
 	category = $('.eventCat').val().trim()
 	location = $('.eventLocation').val().trim();
 	// newEvent = "newEvent";
-	
 
 	//creates an event child and the event name is whatever the user added as the name
 	eventsRef.child(eventName).set({
