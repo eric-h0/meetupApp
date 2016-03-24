@@ -33,20 +33,30 @@ $("#createButton").click(function(){
 $("#findEvent").click(function(){
   $("#eventDiv").show();
   $("#findSection").modal('hide');
+  $("#close").click(function(){
+  $("#findSection").hide();
+  $("#createSection").hide();
+  $("#welcomeCenter").show();
+})
 })
 
 //Add event button on modal.
 $("#addEvent").click(function(){
   $("#eventDiv").show();
   $("#createSection").modal('hide');
-})
-
-//Close Button function.
-$(".close").click(function(){
+  $("#close").click(function(){
   $("#findSection").hide();
   $("#createSection").hide();
   $("#welcomeCenter").show();
 })
+})
+
+//Close Button function.
+// $(".close").click(function(){
+//   $("#findSection").hide();
+//   $("#createSection").hide();
+//   $("#welcomeCenter").show();
+// })
 
 $("#close").click(function(){
   $("#findSection").hide();

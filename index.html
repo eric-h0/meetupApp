@@ -60,7 +60,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
           <h4 class="modal-title animated fadeInDown">Create Your Event</h4>
         </div>
         <div class="modal-body">
@@ -73,7 +73,6 @@
                 <div class="oneLine" style="margin-left: 0;">  
                   
                   <input class="form-control eventName animated fadeInDown"  id="focusedInput" type="text" value="" placeholder="Event Name">
-                  <br> 
               </div> <!-- end event name -->
                 <div class="oneLine">
                    <label class="control-label animated fadeInDown" for="focusedInput">&nbsp;&nbsp;</label>
@@ -122,8 +121,8 @@
         <div class="modal-footer">
             <button type="submit" id="addEvent" class="btn btn-default animated bounce">Add Event</button> <br> <br>
 
-<!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
- -->      
+            <button type="button" id="close" class="btn btn-default" data-dismiss="modal">Close</button>
+      
         </div>
       </div>
 
@@ -137,7 +136,7 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" id="close" class="close" data-dismiss="modal">&times;</button>
+          <!-- <button type="button" id="close" class="close" data-dismiss="modal">&times;</button> -->
           <h4 class="modal-title animated fadeInDown">Find Your Event</h4>
         </div>
         <div class="modal-body">
@@ -167,7 +166,10 @@
 
         </div>
         <div class="modal-footer">
-            <button type="submit" id="findEvent" class="btn btn-default ainmated bounce">Find Event</button> <br> <br>
+            <button type="submit" id="findEvent" class="btn btn-default animated bounce">Find Event</button> <br> <br>
+
+            <button type="button" id="close" class="btn btn-default" data-dismiss="modal">Close</button>
+
 
       <!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
        -->
