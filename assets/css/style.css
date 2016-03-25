@@ -237,3 +237,13 @@ h1 {
 .msgln {
     margin: 0 0 2px 0;
 }
+
+#testbox {
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: yellow;
+}
+
+.well {
+    width: 100%
+}
