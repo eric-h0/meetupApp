@@ -259,7 +259,13 @@ h1 {
 
 }
 
+<<<<<<< HEAD
 .affix {
     top:50px;
     position: fixed;
+=======
+#sqoot img{
+    height:100px ;
+    width: auto;
+>>>>>>> a54286307b7dd5492ca3a05675e0e09f456ddbdc
 }
