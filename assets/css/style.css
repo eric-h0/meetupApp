@@ -37,8 +37,6 @@ h1 {
 
 }
 
-
-
 #eventHeader {
     text-align: center;
 }
@@ -51,7 +49,7 @@ h1 {
     background-color: #ff0000;
 }
 
-
+#eventTime{}
 
 #findButton {
     background-color: #ff0000;
@@ -149,8 +147,8 @@ h1 {
 }
 
 .well {
-/*    width: 250px;
-    height: 300px;*/
+    width: 250px;
+    height: 300px;
     float: left;
     
     margin-right: 15px;
