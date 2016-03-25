@@ -12,6 +12,9 @@ $( document ).ready(function() {
 	var location = "";	
 	var eventsRef = dataRef.child("events");
 
+
+	
+
     //when you click x on post, removes div and child from firebase
     $(document).on('click', '#remove', function() {
     	//makes div disappear
@@ -166,4 +169,7 @@ $( document ).ready(function() {
 
 
 }); //end doc on ready
+
+
+
 

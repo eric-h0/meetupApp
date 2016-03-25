@@ -1,239 +1,213 @@
 <!-- http://ru-going.herokuapp.com/ why -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <!-- jQuery -->
-  <script src="https://code.jquery.com/jquery-2.2.1.min.js"   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="   crossorigin="anonymous"></script>
-  <!-- HTML Magic -->
-  <meta charset="UTF-8">
-  <!-- iPhone Optimization -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
+    <!-- HTML Magic -->
+    <meta charset="UTF-8">
+    <!-- iPhone Optimization -->
     <!-- App Icon Image -->
     <link rel="apple-touch-icon" href="assets/images/icon.jpg">
     <!-- Allows application to become a mobile app -->
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <!-- Stops user from being able to double-tap zoom -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-  <!-- Google Fonts -->
-  <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
-  <!-- Bootstrap -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-  <!-- Bootswatch -->
-  <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <!-- Custom Javascript (mariah) -->
-  <script src="assets/javascript/javascript.js"></script>
-  <!--Animate CSS-->
-  <link rel="stylesheet" href="assets/css/animate.css">
-  <title>RU Going?</title>
-  <!-- Pie Chart CDN -->
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+    <!-- Bootswatch -->
+    <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Custom Javascript (mariah) -->
+    <script src="assets/javascript/javascript.js"></script>
+    <!--Animate CSS-->
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <title>RU Going?</title>
+    <!-- Pie Chart CDN -->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 </head>
+
 <body>
-<!-- Container -->  
-<div class="container"><br><br>
-  <!-- R U Going Header -->
-  <h1 align="center" id="homeButton" class="animated slideInDown"><img src="assets/images/rutgers.png" height="70" width="auto">U Going?</h1><br><br>
 
-<!-- MARIAH'S HTML ADDED -->
-<!-- This holds all the events people post -->
-<div id="testdiv"class="animated fadeInDown"> <!-- Things show here --> </div>
-
-<!-- adding twitter and div into a row -->
-
-  <div class="row">
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <!-- empty -->
-    </div>
-    <div class="col-xs-7  col-sm-7 col-md-7 col-lg-7">
-      <!-- This holds all the events people post -->
-      <div id="testdiv"></div>
-    </div> <!-- end col 8 with twitter -->
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-      <!-- TWITTER -->
-      <div class="resize" id="twitter" style="width: 300px;">
-        <h4>See What's Making News</h4>
-       <a class="twitter-timeline" href="https://twitter.com/hashtag/Rutgers" data-widget-id="710949422897692672">#Rutgers</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </div> <!-- end twitter container -->
-    </div>
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-      <!-- empty -->
-    </div>    
-  </div> <!-- end row -->
-
-
-<!-- END MARIAH'S HTML ADDED -->
-
-  <!-- Container for search or create prompt #findButton #createButton -->
-  <div id="welcomeCenter" align="center">
-      <a href="#" class="btn btn-default btn-lg btn-block animated fadeInDown" id="findButton" data-toggle="modal" data-target="#findSection">Find a Hangout!</a><br><br>
-      <a href="#" class="btn btn-default btn-lg btn-block animated fadeInDown" id="createButton"
-      data-toggle="modal" data-target="#createSection">Create Your Own!</a><br>
-      <element id='pieHeader' class="animated fadeInDown">Where's the action?</element>
-      <div style="width:400; height:300" id="chart_div"></div>
-      <br><br>
-  </div>
-
-  <!-- Container for Create -->
-  <!-- MODAL. USE THIS. -->
-  <div id="createSection" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <!-- <button type="button" class="close" align="right" data-dismiss="modal">&times;</button> -->
-          <h4 class="modal-title animated fadeInDown" align="center">Create Your Event</h4>
-        </div>
-        <div class="modal-body">
-            
-            <div class="form-group">
-
-            <!-- <div class="addEventForm"> -->
-              <label class="control-label animated fadeInDown" for="focusedInput">Event Info:</label>
-              <div class="infoOneLine">
-                <div class="oneLine" style="margin-left: 0;">  
-                  
-                  <input class="form-control eventName animated fadeInDown"  id="focusedInput" type="text" value="" placeholder="Event Name">
-              </div> <!-- end event name -->
-                <div class="oneLine">
-                   <label class="control-label animated fadeInDown" for="focusedInput"></label>
-                  <input class="form-control eventDate animated fadeInDown"  id="focusedInput" type="date" value="" placeholder="Date">
-                </div> <!-- end Date input -->
-         
-                <div class="oneLine">
-                   <label class="control-label animated fadeInDown" for="focusedInput"></label>
-                  <input class="form-control eventTime animated fadeInDown"  id="focusedInput" type="time" value="" placeholder="Time">
-                </div> <!-- end Time input -->
-                 
-              </div>     <!-- end oneLine, this will make it so these 3 boxes appear on one line -->       
-            </div> <!-- end addEventForm -->
-
-            <label for="select">What category best describes your event?</label>
-              <div class="form-group animated fadeInDown">
-                    <select class="form-control eventCat">
-                      <option>Bars</option>
-                      <option>Food</option>
-                      <option>Hangout</option>
-                      <option>Jam Session</option>
-                      <option>Movies</option>
-                      <option>Sports</option>
-                      <option>Study</option>
-                    </select>
-              </div><br>
-
-             <label for="select">Where is your event located?</label>
-              <div class="form-group animated fadeInDown">
-                    <select class="form-control eventLocation">
-                      <option>Busch</option>
-                      <option>College Avenue</option>
-                      <option>Douglass</option>
-                      <option>Cook</option>
-                      <option>Livingston</option>
-                      <option>Off-campus</option>
-                    </select>
-              </div><br>
-
-            <label class="control-label animated fadeInDown" for="focusedInput">Tell us about it:</label>
-            <textarea class="form-control eventDescription animated fadeInDown"  id="focusedInput" type="text" value="" placeholder="What's going down?"></textarea>
+    <!-- Container -->
+    <div class="container">
+        <br>
+        <br>
+        <!-- R U Going Header -->
+        <h1 align="center" id="homeButton" class="animated slideInDown"><img src="assets/images/rutgers.png" height="auto" width="10%">U Going?</h1>
+        <br>
+        <br>
+        <!-- MARIAH'S HTML ADDED -->
+        <!-- This holds all the events people post -->
+        
 
 
         </div>
-        <div class="modal-footer">
-            <button type="submit" id="addEvent" class="btn btn-default animated bounce">Add Event</button> <br> <br>
-
-            <button type="button" class="close" class="btn btn-default" data-dismiss="modal">Close</button>
-      
+        <!-- END MARIAH'S HTML ADDED -->
+        <!-- Container for search or create prompt #findButton #createButton -->
+        <div id="welcomeCenter" align="center">
+            <a href="#" class="btn btn-default btn-lg btn-block animated fadeInDown" id="findButton" data-toggle="modal" data-target="#findSection">Find a Hangout!</a>
+            <br>
+            <br>
+            <a href="#" class="btn btn-default btn-lg btn-block animated fadeInDown" id="createButton" data-toggle="modal" data-target="#createSection">Create Your Own!</a>
+            <br>
+            <element id='pieHeader' class="animated fadeInDown">Where's the action?</element>
+            <div style="width:400; height:300" id="chart_div"></div>
+            <br>
+            <br>
         </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Container for Find -->
-  <div id="findSection" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <!-- <button type="button" id="close" class="close" data-dismiss="modal">&times;</button> -->
-          <h4 class="modal-title animated fadeInDown" align="center">Find Your Event</h4>
+        <!-- Container for Create -->
+        <!-- MODAL. USE THIS. -->
+        <div id="createSection" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <button type="button" class="close" align="right" data-dismiss="modal">&times;</button> -->
+                        <h4 class="modal-title animated fadeInDown" align="center">Create Your Event</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <!-- <div class="addEventForm"> -->
+                            <label class="control-label animated fadeInDown" for="focusedInput">Event Info:</label>
+                            <div class="infoOneLine">
+                                <div class="oneLine" style="margin-left: 0;">
+                                    <input class="form-control eventName animated fadeInDown" id="focusedInput" type="text" value="" placeholder="Event Name">
+                                </div>
+                                <!-- end event name -->
+                                <div class="oneLine">
+                                    <label class="control-label animated fadeInDown" for="focusedInput"></label>
+                                    <input class="form-control eventDate animated fadeInDown" id="focusedInput" type="date" value="" placeholder="Date">
+                                </div>
+                                <!-- end Date input -->
+                                <div class="oneLine">
+                                    <label class="control-label animated fadeInDown" for="focusedInput"></label>
+                                    <input class="form-control eventTime animated fadeInDown" id="focusedInput" type="time" value="" placeholder="Time">
+                                </div>
+                                <!-- end Time input -->
+                            </div>
+                            <!-- end oneLine, this will make it so these 3 boxes appear on one line -->
+                        </div>
+                        <!-- end addEventForm -->
+                        <label for="select">What category best describes your event?</label>
+                        <div class="form-group animated fadeInDown">
+                            <select class="form-control eventCat">
+                                <option>Bars</option>
+                                <option>Food</option>
+                                <option>Hangout</option>
+                                <option>Jam Session</option>
+                                <option>Movies</option>
+                                <option>Sports</option>
+                                <option>Study</option>
+                            </select>
+                        </div>
+                        <br>
+                        <label for="select">Where is your event located?</label>
+                        <div class="form-group animated fadeInDown">
+                            <select class="form-control eventLocation">
+                                <option>Busch</option>
+                                <option>College Avenue</option>
+                                <option>Douglass</option>
+                                <option>Cook</option>
+                                <option>Livingston</option>
+                                <option>Off-campus</option>
+                            </select>
+                        </div>
+                        <br>
+                        <label class="control-label animated fadeInDown" for="focusedInput">Tell us about it:</label>
+                        <textarea class="form-control eventDescription animated fadeInDown" id="focusedInput" type="text" value="" placeholder="What's going down?"></textarea>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="addEvent" class="btn btn-default animated bounce">Add Event</button>
+                        <br>
+                        <br>
+                        <button type="button" class="close" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            <label for="select" class="animated fadeInDown">Which campus would you like to visit?</label>
-              <div class="form-group animated fadeInDown">
-                    <select class="form-control eventLocation" id="selectLocation">
-                      <option>Busch</option>
-                      <option>College Avenue</option>
-                      <option>Cook</option>
-                      <option>Douglass</option>
-                      <option>Livingston</option>
-                      <option>Off-campus</option>
-                    </select>
-              </div><br>
-            <label for="select" class="animated fadeInDown">What would you like to do?</label>
-              <div class="form-group animated fadeInDown">
-                    <select class="form-control eventCat" id="selectCategory">
-                      <option>Bars</option>
-                      <option>Food</option>
-                      <option>Hangout</option>
-                      <option>Jam Session</option>
-                      <option>Movies</option>
-                      <option>Sports</option>
-                      <option>Study</option>
-                    </select>
-              </div>
-
-        </div>
-        <div class="modal-footer">
-            <button type="submit" id="findEvent" class="btn btn-default animated bounce">Find Event</button> <br> <br>
-
-            <button type="button" class="close" class="btn btn-default" data-dismiss="modal">Close</button>
-
-
-      <!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!-- Container for Find -->
+        <div id="findSection" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!-- <button type="button" id="close" class="close" data-dismiss="modal">&times;</button> -->
+                        <h4 class="modal-title animated fadeInDown" align="center">Find Your Event</h4>
+                    </div>
+                    <div class="modal-body">
+                        <label for="select" class="animated fadeInDown">Which campus would you like to visit?</label>
+                        <div class="form-group animated fadeInDown">
+                            <select class="form-control eventLocation" id="selectLocation">
+                                <option>Busch</option>
+                                <option>College Avenue</option>
+                                <option>Cook</option>
+                                <option>Douglass</option>
+                                <option>Livingston</option>
+                                <option>Off-campus</option>
+                            </select>
+                        </div>
+                        <br>
+                        <label for="select" class="animated fadeInDown">What would you like to do?</label>
+                        <div class="form-group animated fadeInDown">
+                            <select class="form-control eventCat" id="selectCategory">
+                                <option>Bars</option>
+                                <option>Food</option>
+                                <option>Hangout</option>
+                                <option>Jam Session</option>
+                                <option>Movies</option>
+                                <option>Sports</option>
+                                <option>Study</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" id="findEvent" class="btn btn-default animated bounce">Find Event</button>
+                        <br>
+                        <br>
+                        <button type="button" class="close" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <!--             <button type="button" id="closeEvent" class="btn btn-default" data-dismiss="modal">Close</button>
        -->
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-    </div>
-  </div>
-  <!-- ^Container for Find -->
-  
-  <!-- Container for event divs #eventDiv -->
-  <div id="eventDiv">
-      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <element id = "eventHeader"><h4><!-- Post-Exam Stress Release at Knight Club --></h4></element>
-
-
-        <!-- Prepopulated image -->
-<!--         <img src="assets/images/knightClub.jpg"><br>
+        <!-- ^Container for Find -->
+        <!-- Container for event divs #eventDiv -->
+        <div id="eventDiv">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <element id="eventHeader">
+                    <h4><!-- Post-Exam Stress Release at Knight Club --></h4></element>
+                <!-- Prepopulated image -->
+                <!--         <img src="assets/images/knightClub.jpg"><br>
  -->
-        <!-- Informational table -->
-        <!-- <table class="table table-striped table-hover">
+                <!-- Informational table -->
+                <!-- <table class="table table-striped table-hover">
         <thead>
           <tr> -->
-            <!-- Event Creator #eventCreator h6: css -->
-            <!-- <td>
+                <!-- Event Creator #eventCreator h6: css -->
+                <!-- <td>
               <element id= "eventCreator">
                 <h6>
                 Created by:<br>Eric Ho
                 </h6>
               </element>
             </td> -->
-            <!-- Weather -->
-            <!-- <td>
+                <!-- Weather -->
+                <!-- <td>
               <h6> 
-                <div id="weather"> -->
-                <!-- Weather info shoots here -->
-                <!-- </div>
+                <div id="weather">
+                 Weather info shoots here
+                 </div>
               </h6>
             </td> -->
-            <!-- Event time #eventTime -->
-            <!-- <td>
+                <!-- Event time #eventTime -->
+                <!-- <td>
               <element id = "eventTime">
                 <h6>
                 Event time:<br>11:00pm
@@ -242,49 +216,70 @@
             </td>
           </tr>
           </thead>
-        </table>   -->    
-      
-      <!-- Join this hangout button -->
-      <!-- <a href="#" id = "eventJoin" class="btn btn-default" hidden>Join this hangout</a><br><br><br><br>
+        </table>   -->
+                <!-- Join this hangout button -->
+                <!-- <a href="#" id = "eventJoin" class="btn btn-default" hidden>Join this hangout</a><br><br><br><br>
       </div> -->
-      
-      <!-- CHAT GOES HERE. -->
-    <div id="chat-container" class="animated slideInDown" width="100%">
-      <header>RU Going? Chat</header>
-        <div id="menu">
-          </div>
-        <div class='chat-menu'>
-          <label for="nameInput" class="username">Username:</label>
-          <input type='text' id='nameInput' placeholder='Enter a Username...'>
-        <ul id='messages' class="chat-messages"></ul>
-          <label for="nameInput" class="messages">Message:</label>
-          <input type='text' id='messageInput'  placeholder='Type a Message...'>
+                <!-- CHAT GOES HERE. -->
+                <div class="row" width="400px" align="center">  
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                <div id="testdiv" class="animated fadeInDown" align="center">
+                    <!-- Things show here -->
+                </div>
+                </div> 
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"></div>
+                </div>
+
+                <div class="resize" id="twitter" width="300px">
+                    <h4>See What's Making News</h4>
+                    <a class="twitter-timeline" href="https://twitter.com/hashtag/Rutgers" data-widget-id="710949422897692672">#Rutgers</a>
+                    <script>
+                    ! function(d, s, id) {
+                        var js, fjs = d.getElementsByTagName(s)[0],
+                            p = /^http:/.test(d.location) ? 'http' : 'https';
+                        if (!d.getElementById(id)) {
+                            js = d.createElement(s);
+                            js.id = id;
+                            js.src = p + "://platform.twitter.com/widgets.js";
+                            fjs.parentNode.insertBefore(js, fjs);
+                        }
+                    }(document, "script", "twitter-wjs");
+                    </script>
+                </div>
+
+                <div id="chat-container" class="animated slideInDown" width="100%">
+                    <header>RU Going? Chat</header>
+                    <div id="menu">
+                    </div>
+                    <div class='chat-menu'>
+                        <label for="nameInput" class="username">Username:</label>
+                        <input type='text' id='nameInput' placeholder='Enter a Username...'>
+                        <ul id='messages' class="chat-messages"></ul>
+                        <label for="nameInput" class="messages">Message:</label>
+                        <input type='text' id='messageInput' placeholder='Type a Message...'>
+                    </div>
+                </div>
+
+                
+
+
+            </div>
+
+                    <!-- adding twitter and div into a row -->
+            
+                
+                
+            <!-- End of row -->
         </div>
-  </div>
-    </div> <!-- End of row -->
-  </div> <!-- End of eventDiv -->
-  </div>
-  </div>
-<!-- ^Container -->
-<!-- Nav Buttons -->
-<div id="navButtons">
-<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-  <!-- empty -->
-</div>
-  <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-    <ul class="pager">
-      <li class="previous"><a href="#" id="backButton">&larr; Back</a></li>
-      <li class="next" id="forwardButton"><a href="#" id="forwardButton">Forward &rarr;</a></li>
-    </ul>
-  </div>
-<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-  <!-- empty -->
-</div>
-</div>
-<!-- Footer -->
-<footer class="aimated stretchIn">&copy; Ninth Mystery Productions</footer>
-
-<script src="assets/javascript/logic.js"></script>
-
+        <!-- End of eventDiv -->
+    </div>
+    </div>
+    <!-- ^Container -->
+    <!-- Nav Buttons -->
+    <!-- Footer -->
+    <footer class="aimated stretchIn">&copy; Ninth Mystery Productions</footer>
+    <script src="assets/javascript/logic.js"></script>
 </body>
+
 </html>
