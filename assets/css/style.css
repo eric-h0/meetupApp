@@ -21,10 +21,6 @@ h1 {
     color: black;
 }
 
-#createButton {
-    background-color: #ff0000;
-    font-size: 25px;
-}
 
 #eventDiv {
     text-align: center;
@@ -47,11 +43,10 @@ h1 {
     background-color: #ff0000;
 }
 
-#eventTime {}
-
-#findButton {
+#findButton, #createButton {
     background-color: #ff0000;
     font-size: 25px;
+    width: 65%;
 }
 
 #createSection {
@@ -61,7 +56,7 @@ h1 {
 
 #findSection {
     position: fixed;
-    top: 150px;
+    top: 25%;
 }
 
 #forwardButton {
@@ -81,6 +76,16 @@ h1 {
     margin-top: 20px;
 }
 
+#join {
+    text-align: center;
+    background-color: red;
+    width: 70%;
+}
+
+#buttonWell {
+    text-align: center;
+}
+
 #pieHeader {
     font-family: 'Paytone One', sans-serif;
     font-size: 25px;
@@ -91,7 +96,7 @@ h1 {
 }
 
 #welcomeCenter img {
-    width: 60%;
+    width: 25%;
     height: auto;
     text-align: center;
 }
@@ -141,11 +146,8 @@ h1 {
 }
 
 .well {
-    width: 250px;
-    height: 300px;
-    float: left;
-    margin-right: 15px;
 }
+
 
 .required sup {
     color: red;
@@ -166,13 +168,12 @@ h1 {
     padding-top: 2px;
 }
 
-#twitter {
-  /*float: right;*/
+/*#twitter {
+  float: right;
   display: none;
-  /*margin-left: 30px;*/
-  
+  margin-left: 30px;
 }
-
+*/
 
 /*Leslie's css*/
 
@@ -183,8 +184,8 @@ h1 {
 */
     background: gray;
     opacity: ;
-/*    width: 520px;
-*/    height: 370px;
+    width: 40%;
+    height: 370px;
     border: 3px solid white;
     /*margin-top:50px;
     margin-bottom:50px;
