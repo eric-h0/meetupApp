@@ -42,7 +42,7 @@ $( document ).ready(function() {
 	$('#addEvent').on('click', function (){
 
     //onload, twitter will not show until you enter queries
-    $("#twitter").toggle();
+    // $("#twitter").toggle();
 
 
 	// Grabbed values from text boxes
@@ -89,8 +89,12 @@ $( document ).ready(function() {
 
 		       //this will see if the second parameter category is found within the first query's results
 			      if (catSort.category == category) {
+<<<<<<< HEAD
 			      	    $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'><span class='glyphicon glyphicon-calendar'></span> "+ snapshot.val().eventDate + " <span id='eventTime'> <span class='glyphicon glyphicon-time' aria-hidden='true'></span>" + snapshot.val().eventTime + " </span></div><div id='eventDescription'> " + "<b>About the event:&nbsp;&nbsp;</b>" + snapshot.val().eventDescription + " <div id='category'> " + "<b>Category:&nbsp;&nbsp;</b>" + snapshot.val().category + "<span id='location'> " + "<b>Campus:&nbsp;&nbsp;</b>" + snapshot.val().location + "</span></div></div>");
 
+=======
+                $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><div id='remove'>X</div>" + "<div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'> " + "Date:&nbsp;&nbsp;" + snapshot.val().eventDate + " </div><div id='eventTime'> " + "Time:&nbsp;&nbsp; " + snapshot.val().eventTime + " </div><div id='eventDescription'> " + "About the event:&nbsp;&nbsp;" + snapshot.val().eventDescription + " <div id='category'> " + "Category:&nbsp;&nbsp;" + snapshot.val().category + " </div><div id='location'> " + "Campus:&nbsp;&nbsp;" + snapshot.val().location + "</div></div>" + "<br>" + "<div id='buttonWell'>" + "<button id='join' class='btn'>" + 'Join Hangout' + "</button>" + "</div>");
+>>>>>>> upstream/master
 
 			          console.log(catSort);
 
@@ -152,7 +156,11 @@ $( document ).ready(function() {
 
 		       //this will see if the second parameter category is found within the first query's results
 			      if (catSort.category == category) {
+<<<<<<< HEAD
 			      	    $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'><span class='glyphicon glyphicon-calendar'></span> "+ snapshot.val().eventDate + " <span id='eventTime'> <span class='glyphicon glyphicon-time' aria-hidden='true'></span>" + snapshot.val().eventTime + " </span></div><div id='eventDescription'> " + "<b>About the event:&nbsp;&nbsp;</b>" + snapshot.val().eventDescription + " <div id='category'> " + "<b>Category:&nbsp;&nbsp;</b>" + snapshot.val().category + "<span id='location'> " + "<b>Campus:&nbsp;&nbsp;</b>" + snapshot.val().location + "</span></div></div>");
+=======
+			      	  $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><div id='remove'>X</div>" + "<div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'> " + "Date:&nbsp;&nbsp;" + snapshot.val().eventDate + " </div><div id='eventTime'> " + "Time:&nbsp;&nbsp; " + snapshot.val().eventTime + " </div><div id='eventDescription'> " + "About the event:&nbsp;&nbsp;" + snapshot.val().eventDescription + " <div id='category'> " + "Category:&nbsp;&nbsp;" + snapshot.val().category + " </div><div id='location'> " + "Campus:&nbsp;&nbsp;" + snapshot.val().location + "</div></div>" + "<br>" + "<div id='buttonWell'>" + "<button id='join' class='btn'>" + 'Join Hangout' + "</button>" + "</div>");
+>>>>>>> upstream/master
 
 			          console.log(catSort);
 
@@ -167,7 +175,56 @@ $( document ).ready(function() {
 
 	});//end go button on click
 
+//AARON'S randomized deal thing
 
+	$("#random").click(function(){
+
+		//empty div before another request fills in the div
+		$("#sqoot").empty();
+
+		//creates random num to insert into query
+	 	var randomNum = Math.floor((Math.random() * 45) + 1);
+		console.log(randomNum);
+
+			//this is the query URL for deals in NB
+		var queryURL = "https://api.sqoot.com/v2/deals?location=08901&radius=5&per_page=50&api_key=0Ysvd4ooNwpRSIdrghiC";
+		//log the queryURL
+		// console.log(queryURL);
+
+		$.ajax({url: queryURL, method: 'GET'})
+		 .done(function(response){
+
+
+
+		 	//logs title of deal
+		 	// console.log(response.deals[1].deal.title);
+		 	//sets title to variable
+		 	var title = response.deals[randomNum].deal.title;
+		 	//puts deal in div
+		 	$("#sqoot").append(title);
+		 	$("#sqoot").append("<br>");
+
+
+		 	//image url of deal
+		 	// console.log(response.deals[1].deal.image_url);
+		 	//sets image url to varaible
+		 	var imageURL = response.deals[randomNum].deal.image_url;
+		 	//sets dealURL to variable
+		 	var dealURL = response.deals[randomNum].deal.url;
+		 	//append image to sqoot div and append dealURL to image tag
+		 	$("#sqoot").append("<a href='" + dealURL + "' target='_blank'><img id='image'alt='deal image'src='"+ imageURL +"'></a>");
+		 	$("#sqoot").append("<br>");
+		 	//append text
+		 	$("#sqoot").append("<h6>Click image to find out more</h6>");
+		 
+		 	
+
+
+
+
+		 });
+
+	});
 
 }); //end doc on ready
 
