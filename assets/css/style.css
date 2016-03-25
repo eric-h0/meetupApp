@@ -253,3 +253,10 @@ h1 {
 #testdiv {
     text-align: left;
 }
+
+#weather  {
+    position: absolute;
+    top:100px;
+    right: 100px;
+
+}
