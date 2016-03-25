@@ -166,7 +166,56 @@ $( document ).ready(function() {
 
 	});//end go button on click
 
+//AARON'S randomized deal thing
 
+	$("#random").click(function(){
+
+		//empty div before another request fills in the div
+		$("#sqoot").empty();
+
+		//creates random num to insert into query
+	 	var randomNum = Math.floor((Math.random() * 45) + 1);
+		console.log(randomNum);
+
+			//this is the query URL for deals in NB
+		var queryURL = "https://api.sqoot.com/v2/deals?location=08901&radius=5&per_page=50&api_key=0Ysvd4ooNwpRSIdrghiC";
+		//log the queryURL
+		// console.log(queryURL);
+
+		$.ajax({url: queryURL, method: 'GET'})
+		 .done(function(response){
+
+
+
+		 	//logs title of deal
+		 	// console.log(response.deals[1].deal.title);
+		 	//sets title to variable
+		 	var title = response.deals[randomNum].deal.title;
+		 	//puts deal in div
+		 	$("#sqoot").append(title);
+		 	$("#sqoot").append("<br>");
+
+
+		 	//image url of deal
+		 	// console.log(response.deals[1].deal.image_url);
+		 	//sets image url to varaible
+		 	var imageURL = response.deals[randomNum].deal.image_url;
+		 	//sets dealURL to variable
+		 	var dealURL = response.deals[randomNum].deal.url;
+		 	//append image to sqoot div and append dealURL to image tag
+		 	$("#sqoot").append("<a href='" + dealURL + "'><img id='image'alt='deal image'src='"+ imageURL +"'></a>");
+		 	$("#sqoot").append("<br>");
+		 	//append text
+		 	$("#sqoot").append("<h6>Click image to find out more</h6>");
+		 
+		 	
+
+
+
+
+		 });
+
+	});
 
 }); //end doc on ready
 
