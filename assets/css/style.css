@@ -79,7 +79,8 @@ h1 {
 #join {
     text-align: center;
     background-color: red;
-    width: 50%;
+    width: 30%;
+    font-size: 18px;
 }
 
 #buttonWell {
@@ -145,7 +146,8 @@ h1 {
     width: 100%;
 }
 
-.well {
+#wellContent {
+    line-height: 300%;
 }
 
 
