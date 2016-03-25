@@ -89,7 +89,7 @@ $( document ).ready(function() {
 
 		       //this will see if the second parameter category is found within the first query's results
 			      if (catSort.category == category) {
-			      	    $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><span class='glyphicon glyphicon-remove'><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'><span class='glyphicon glyphicon-calendar'></span> "+ snapshot.val().eventDate + " <span id='eventTime'> <span class='glyphicon glyphicon-time' aria-hidden='true'></span>" + snapshot.val().eventTime + " </span></div><div id='eventDescription'> " + "<b>About the event:&nbsp;&nbsp;</b>" + snapshot.val().eventDescription + " <div id='category'> " + "<b>Category:&nbsp;&nbsp;</b>" + snapshot.val().category + "<span id='location'> " + "<b>Campus:&nbsp;&nbsp;</b>" + snapshot.val().location + "</span></div></div>");
+			      	    $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><span class='glyphicon glyphicon-remove'></span><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'><span class='glyphicon glyphicon-calendar'></span> "+ snapshot.val().eventDate + " <span id='eventTime'> <span class='glyphicon glyphicon-time' aria-hidden='true'></span>" + snapshot.val().eventTime + " </span></div><div id='eventDescription'> " + "<b>About the event:&nbsp;&nbsp;</b>" + snapshot.val().eventDescription + " <div id='category'> " + "<b>Category:&nbsp;&nbsp;</b>" + snapshot.val().category + "<span id='location'> " + "<b>Campus:&nbsp;&nbsp;</b>" + snapshot.val().location + "</span></div></div>");
 
 
 			          console.log(catSort);
