@@ -195,15 +195,13 @@ h1 {
 }
 
 
-/*#loginform { padding-top:18px; }
-  
-    #loginform p { margin: 5px; }*/
+
 
 #username {
     color: white;
     text-align: center;
     padding: 10px;
-    /*border:1px solid black;*/
+    border:1px solid black;
 }
 
 .chat-messages {
