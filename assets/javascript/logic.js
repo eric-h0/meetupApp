@@ -3,13 +3,16 @@ $("#createSection").hide();
 $("#eventDiv").hide();
 $("#findSection").hide();
 $("#createEventForm").hide();
+$("#twitter").hide();
 
 //Makes the RU Going? title a home button.
 $("#homeButton").click(function() {
     $("#welcomeCenter").show();
+    $("#twitter").hide();
     $("#eventDiv").hide();
     $("#findSection").hide();
     $("#createEventForm").hide();
+    $("#testdiv").empty();
 });
 
 //Find a Hangout! button click.
@@ -20,6 +23,7 @@ $("#findButton").click(function() {
         $("#findSection").hide();
         $("#welcomeCenter").show();
         $("#eventDiv").hide();
+        $("#testdiv").show();
     });
 });
 
@@ -32,6 +36,8 @@ $("#createButton").click(function() {
 //Find event button on modal.
 $("#findEvent").click(function() {
     $("#eventDiv").show();
+    $("#testdiv").show();
+    $("#twitter").show();
     $("#findSection").modal('hide');
     $("#close").click(function() {
         $("#findSection").hide();
@@ -42,7 +48,10 @@ $("#findEvent").click(function() {
 
 //Add event button on modal.
 $("#addEvent").click(function() {
-    $("#eventDiv").show();
+    // $("#eventDiv").show();
+    $("#twitter").show();
+    $("#testdiv").empty();
+    $("#eventDiv").empty();
     $("#createSection").modal('hide');
     $("#close").click(function() {
         $("#findSection").hide();

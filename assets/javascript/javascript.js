@@ -2,6 +2,7 @@ $( document ).ready(function() {
 	var url ='https://rcb-mm-app.firebaseio.com/';
 	// Firebase link
 	var dataRef = new Firebase("rcb-mm-app.firebaseio.com/");
+	var ref = new Firebase("https://rcb-mm-app.firebaseio.com/events");
 	// Initial Values
 	var eventName = "";
 	var eventDate = "";
@@ -78,7 +79,6 @@ $( document ).ready(function() {
 			 // searchEvents(location, category);
 			 // return false;
 
-			var ref = new Firebase("https://rcb-mm-app.firebaseio.com/events");
 			ref.orderByChild("location").equalTo(location).on("child_added", function(snapshot) {
 		    // console.log(snapshot.key() + " is located: " + snapshot.val().location + " and is in this category: " +snapshot.val().category);
 
@@ -86,7 +86,7 @@ $( document ).ready(function() {
 
 		       //this will see if the second parameter category is found within the first query's results
 			      if (catSort.category == category) {
-			      	$('#testdiv').append("<div class='well'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>"+snapshot.val().eventName+"</strong></h4>" +"</div><div id='eventDate'> "+"Date:&nbsp;&nbsp;"+snapshot.val().eventDate+" </div><div id='eventTime'> "+ "Time:&nbsp;&nbsp; " +snapshot.val().eventTime+" </div><div id='eventDescription'> "+"About the event:&nbsp;&nbsp;"+snapshot.val().eventDescription+" <div id='category'> "+"Category:&nbsp;&nbsp;"+snapshot.val().category+" </div><div id='location'> "+"Campus:&nbsp;&nbsp;"+snapshot.val().location+"</div></div>");
+                $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'> " + "Date:&nbsp;&nbsp;" + snapshot.val().eventDate + " </div><div id='eventTime'> " + "Time:&nbsp;&nbsp; " + snapshot.val().eventTime + " </div><div id='eventDescription'> " + "About the event:&nbsp;&nbsp;" + snapshot.val().eventDescription + " <div id='category'> " + "Category:&nbsp;&nbsp;" + snapshot.val().category + " </div><div id='location'> " + "Campus:&nbsp;&nbsp;" + snapshot.val().location + "</div></div>");
 
 			          console.log(catSort);
 
@@ -148,7 +148,7 @@ $( document ).ready(function() {
 
 		       //this will see if the second parameter category is found within the first query's results
 			      if (catSort.category == category) {
-			      	$('#testdiv').append("<div class='well'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>"+snapshot.val().eventName+"</strong></h4>" +"</div><div id='eventDate'> "+"Date:&nbsp;&nbsp;"+snapshot.val().eventDate+" </div><div id='eventTime'> "+ "Time:&nbsp;&nbsp; " +snapshot.val().eventTime+" </div><div id='eventDescription'> "+"About the event:&nbsp;&nbsp;"+snapshot.val().eventDescription+" <div id='category'> "+"Category:&nbsp;&nbsp;"+snapshot.val().category+" </div><div id='location'> "+"Campus:&nbsp;&nbsp;"+snapshot.val().location+"</div></div>");
+			      	                $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'> " + "Date:&nbsp;&nbsp;" + snapshot.val().eventDate + " </div><div id='eventTime'> " + "Time:&nbsp;&nbsp; " + snapshot.val().eventTime + " </div><div id='eventDescription'> " + "About the event:&nbsp;&nbsp;" + snapshot.val().eventDescription + " <div id='category'> " + "Category:&nbsp;&nbsp;" + snapshot.val().category + " </div><div id='location'> " + "Campus:&nbsp;&nbsp;" + snapshot.val().location + "</div></div>");
 
 			          console.log(catSort);
 
