@@ -48,10 +48,9 @@ $("#findEvent").click(function() {
 
 //Add event button on modal.
 $("#addEvent").click(function() {
-    // $("#eventDiv").show();
+    $("#eventDiv").show();
     $("#twitter").show();
     $("#testdiv").empty();
-    $("#eventDiv").empty();
     $("#createSection").modal('hide');
     $("#close").click(function() {
         $("#findSection").hide();

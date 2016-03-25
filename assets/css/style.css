@@ -183,7 +183,7 @@ h1 {
 */
     background: gray;
     opacity: ;
-    width: 350px;
+    width: 520px;
     height: 370px;
     border: 3px solid white;
     /*margin-top:50px;
@@ -238,12 +238,17 @@ h1 {
     margin: 0 0 2px 0;
 }
 
-#testbox {
+/*#testbox {
     justify-content: space-between;
     margin: 0 auto;
     background-color: yellow;
-}
+}*/
 
 .well {
-    width: 100%
+    width: 100%;
+    height: auto;
+}
+
+#testdiv {
+    text-align: left;
 }

@@ -13,7 +13,7 @@ $( document ).ready(function() {
 	var eventsRef = dataRef.child("events");
 
 
-	
+
 
     //when you click x on post, removes div and child from firebase
     $(document).on('click', '#remove', function() {
