@@ -138,7 +138,51 @@ $.ajax({ url: queryURL, method: 'GET' })
         // $("#weather").append(weather + "<br>");
         $("#weather").append("<img src='" + iconURL + "'>");
         $("#weather").append(temp + "&#8457" + "<br>");
+
     });
+
+
+	$("#random").click(function(){
+
+		//empty div before another request fills in the div
+		$("#sqoot").empty();
+
+		//creates random num to insert into query
+	 	var randomNum = Math.floor((Math.random() * 45) + 1);
+		console.log(randomNum);
+
+			//this is the query URL for deals in NB
+		var queryURL = "https://api.sqoot.com/v2/deals?location=08901&radius=5&per_page=50&api_key=0Ysvd4ooNwpRSIdrghiC";
+		//log the queryURL
+		// console.log(queryURL);
+
+		$.ajax({url: queryURL, method: 'GET'})
+		 .done(function(response){
+
+
+
+		 	//logs title of deal
+		 	// console.log(response.deals[1].deal.title);
+		 	//sets title to variable
+		 	var title = response.deals[randomNum].deal.title;
+		 	//puts deal in div
+		 	$("#sqoot").append(title);
+
+		 	//image url of deal
+		 	// console.log(response.deals[1].deal.image_url);
+		 	//sets image url to varaible
+		 	var imageURL = response.deals[randomNum].deal.image_url;
+		 	//sets dealURL to variable
+		 	var dealURL = response.deals[randomNum].deal.url;
+		 	//append image to sqoot div and append dealURL to image tag
+		 	$("#sqoot").append("<a href='" + dealURL + "'><img id='image'alt='deal image'src='"+ imageURL +"'></a>");
+		 	//append text
+		 	$("#sqoot").append("<h6>Click image to find out more</h6>");
+		 
+		 });
+
+	});
+
 
 //Leslie's awesome chat section
 var messagesRef = new Firebase('https://ninthmysterychat.firebaseio.com/');
@@ -275,48 +319,48 @@ messagesRef.limitToLast(10).on('child_added', function(snapshot) {
 
 //=========END MARIAH'S PREVIOUS JAVASCRIPT ======
 
-//Aaron's pie chart
-// Load the Visualization API and the piechart package.
-google.load('visualization', '1.0', { 'packages': ['corechart'] });
+// -------------------------//Aaron's pie chart commented out to put 'deals' in its place----------------------------
+// // Load the Visualization API and the piechart package.
+// google.load('visualization', '1.0', { 'packages': ['corechart'] });
 
-// Set a callback to run when the Google Visualization API is loaded.
-google.setOnLoadCallback(drawChart);
+// // Set a callback to run when the Google Visualization API is loaded.
+// google.setOnLoadCallback(drawChart);
 
-// Callback that creates and populates a data table, 
-// instantiates the pie chart, passes in the data and
-// draws it.
-function drawChart() {
+// // Callback that creates and populates a data table, 
+// // instantiates the pie chart, passes in the data and
+// // draws it.
+// function drawChart() {
 
-    // Create the data table.
-    var data = new google.visualization.DataTable();
-    data.addColumn('string', 'Topping');
-    data.addColumn('number', 'Slices');
-    data.addRows([
-        ['College Ave.', 23],
-        ['Busch', 10],
-        ['Cook/Douglass', 12],
-        ['Livingston', 19]
-    ]);
+//     // Create the data table.
+//     var data = new google.visualization.DataTable();
+//     data.addColumn('string', 'Topping');
+//     data.addColumn('number', 'Slices');
+//     data.addRows([
+//         ['College Ave.', 23],
+//         ['Busch', 10],
+//         ['Cook/Douglass', 12],
+//         ['Livingston', 19]
+//     ]);
 
-    // Set chart options
-    var options = {
-        width: 400,
-        height: 240,
-        // title: 'Where\'s the action?',
-        colors: ['red', '#2f2f2f', 'grey', 'lightgrey'],
-        is3D: true,
-        backgroundColor: 'black',
-        pieSliceText: 'value',
-        titleTextStyle: {
-            color: 'white',
-            fontSize: 20,
-            bold: false,
-            italic: false
-        },
-        legend: { position: 'right', textStyle: { color: 'white', fontSize: 12 } }
-    };
+//     // Set chart options
+//     var options = {
+//         width: 400,
+//         height: 240,
+//         // title: 'Where\'s the action?',
+//         colors: ['red', '#2f2f2f', 'grey', 'lightgrey'],
+//         is3D: true,
+//         backgroundColor: 'black',
+//         pieSliceText: 'value',
+//         titleTextStyle: {
+//             color: 'white',
+//             fontSize: 20,
+//             bold: false,
+//             italic: false
+//         },
+//         legend: { position: 'right', textStyle: { color: 'white', fontSize: 12 } }
+//     };
 
-    // Instantiate and draw our chart, passing in some options.
-    var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-    chart.draw(data, options);
-}
+//     // Instantiate and draw our chart, passing in some options.
+//     var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
+//     chart.draw(data, options);
+// }
