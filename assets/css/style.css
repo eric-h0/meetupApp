@@ -90,6 +90,14 @@ h1 {
     width: 40px;
 }
 
+#weather  {
+    position: absolute;
+    top:100px;
+    right: 100px;
+
+
+}
+
 #welcomeCenter img {
     width: 60%;
     height: auto;
@@ -252,3 +260,16 @@ h1 {
 #testdiv {
     text-align: left;
 }
+
+        
+#sqoot  {color:white;
+         text-align: center;
+         font-family: 'Paytone One', sans-serif;}
+
+#squoot img     {height: 200px;
+         width: auto;
+         alignment: center;}
+
+#random {background-color: #ff0000;
+
+        }
