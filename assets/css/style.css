@@ -188,22 +188,26 @@ h1 {
     margin-left: 10px;
 }
 
-#remove {
+.glyphicon-remove {
     float: right;
     background-color: black;
     border-radius: 3px;
     /*padding: 4px;*/
+    z-index: 1;
     width: 25px;
     height: 25px;
     text-align: center;
     vertical-align: middle;
-    padding-top: 2px;
     margin: 5px;
     cursor:pointer;
 }
 
+.glyphicon-remove:hover {
+    background-color: #403e3e;
+}
+
 #twitter {
-  width: 100%
+  width: 100%;
 }
 
 #eventName {
@@ -290,6 +294,9 @@ h1 {
 }*/
 
 .well {
+    width: 100%;
+    height: auto;
+    padding: 0px;
 }
 
 #testdiv {
@@ -303,13 +310,13 @@ h1 {
 
 }
 
-<<<<<<< HEAD
+
 .affix {
     top:50px;
     position: fixed;
-=======
+
 #sqoot img{
     height:100px ;
     width: auto;
->>>>>>> a54286307b7dd5492ca3a05675e0e09f456ddbdc
+
 }
