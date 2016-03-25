@@ -34,11 +34,10 @@ h1 {
 #eventDiv img {
     width: 100%;
     height: auto;
-<<<<<<< HEAD
 
-=======
->>>>>>> f840feac31007b5fc06ade67cdd099392cded6b5
 }
+
+
 
 #eventHeader {
     text-align: center;
@@ -52,7 +51,7 @@ h1 {
     background-color: #ff0000;
 }
 
-#eventTime{}
+
 
 #findButton {
     background-color: #ff0000;
@@ -150,8 +149,8 @@ h1 {
 }
 
 .well {
-    width: 250px;
-    height: 300px;
+/*    width: 250px;
+    height: 300px;*/
     float: left;
     
     margin-right: 15px;
