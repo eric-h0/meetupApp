@@ -203,7 +203,7 @@ $( document ).ready(function() {
 		 	//sets dealURL to variable
 		 	var dealURL = response.deals[randomNum].deal.url;
 		 	//append image to sqoot div and append dealURL to image tag
-		 	$("#sqoot").append("<a href='" + dealURL + "'><img id='image'alt='deal image'src='"+ imageURL +"'></a>");
+		 	$("#sqoot").append("<a href='" + dealURL + "' target='_blank'><img id='image'alt='deal image'src='"+ imageURL +"'></a>");
 		 	$("#sqoot").append("<br>");
 		 	//append text
 		 	$("#sqoot").append("<h6>Click image to find out more</h6>");
