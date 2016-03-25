@@ -89,7 +89,8 @@ $( document ).ready(function() {
 
 		       //this will see if the second parameter category is found within the first query's results
 			      if (catSort.category == category) {
-                $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'> " + "Date:&nbsp;&nbsp;" + snapshot.val().eventDate + " </div><div id='eventTime'> " + "Time:&nbsp;&nbsp; " + snapshot.val().eventTime + " </div><div id='eventDescription'> " + "About the event:&nbsp;&nbsp;" + snapshot.val().eventDescription + " <div id='category'> " + "Category:&nbsp;&nbsp;" + snapshot.val().category + " </div><div id='location'> " + "Campus:&nbsp;&nbsp;" + snapshot.val().location + "</div></div>");
+			      	    $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'><span class='glyphicon glyphicon-calendar'></span> "+ snapshot.val().eventDate + " <span id='eventTime'> <span class='glyphicon glyphicon-time' aria-hidden='true'></span>" + snapshot.val().eventTime + " </span></div><div id='eventDescription'> " + "<b>About the event:&nbsp;&nbsp;</b>" + snapshot.val().eventDescription + " <div id='category'> " + "<b>Category:&nbsp;&nbsp;</b>" + snapshot.val().category + "<span id='location'> " + "<b>Campus:&nbsp;&nbsp;</b>" + snapshot.val().location + "</span></div></div>");
+
 
 			          console.log(catSort);
 
@@ -151,7 +152,7 @@ $( document ).ready(function() {
 
 		       //this will see if the second parameter category is found within the first query's results
 			      if (catSort.category == category) {
-			      	                $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'> " + "Date:&nbsp;&nbsp;" + snapshot.val().eventDate + " </div><div id='eventTime'> " + "Time:&nbsp;&nbsp; " + snapshot.val().eventTime + " </div><div id='eventDescription'> " + "About the event:&nbsp;&nbsp;" + snapshot.val().eventDescription + " <div id='category'> " + "Category:&nbsp;&nbsp;" + snapshot.val().category + " </div><div id='location'> " + "Campus:&nbsp;&nbsp;" + snapshot.val().location + "</div></div>");
+			      	    $('#testdiv').prepend("<div class='well' id='"+ snapshot.key() +"'><div id='remove'>X</div><div id='eventName'>" + "<h4><strong>" + snapshot.val().eventName + "</strong></h4>" + "</div><div id='eventDate'><span class='glyphicon glyphicon-calendar'></span> "+ snapshot.val().eventDate + " <span id='eventTime'> <span class='glyphicon glyphicon-time' aria-hidden='true'></span>" + snapshot.val().eventTime + " </span></div><div id='eventDescription'> " + "<b>About the event:&nbsp;&nbsp;</b>" + snapshot.val().eventDescription + " <div id='category'> " + "<b>Category:&nbsp;&nbsp;</b>" + snapshot.val().category + "<span id='location'> " + "<b>Campus:&nbsp;&nbsp;</b>" + snapshot.val().location + "</span></div></div>");
 
 			          console.log(catSort);
 
