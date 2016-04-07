@@ -33,9 +33,7 @@ An app created for Rutgers Students to create group events with their fellow cla
 * Sqoot weather API
 
 
-<br><br><br>
-
-
+<br>
 <p align="center">
 &copy; Ninth Mystery Productions
 </p>
