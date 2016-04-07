@@ -36,8 +36,8 @@ $("#createButton").click(function() {
 //Find event button on modal.
 $("#findEvent").click(function() {
     $("#eventDiv").show();
-    $("#testdiv").show();
     $("#twitter").show();
+    $("#testdiv").show();
     $("#findSection").modal('hide');
     $("#close").click(function() {
         $("#findSection").hide();
@@ -50,7 +50,7 @@ $("#findEvent").click(function() {
 $("#addEvent").click(function() {
     $("#eventDiv").show();
     $("#twitter").show();
-    $("#testdiv").empty();
+    $("#testdiv").show();
     $("#createSection").modal('hide');
     $("#close").click(function() {
         $("#findSection").hide();
@@ -66,22 +66,6 @@ $(".close").click(function() {
     $("#welcomeCenter").show();
 })
 
-// $("#close").click(function(){
-//   $("#findSection").hide();
-//   $("#createSection").hide();
-//   $("#welcomeCenter").show();
-// })
-
-// //Create a Hangout! button click.
-// $("#createButton").click(function(){
-//   $("#createSection").show();
-//   $("#welcomeCenter").hide();
-//     $("#backButton").click(function(){
-//       $("#createSection").hide();
-//       $("#welcomeCenter").show();
-//       $("#eventDiv").hide();
-//     });
-// }); yep
 
 //Create Your Own! button click.
 $("#createButton").click(function() {
@@ -175,105 +159,6 @@ messagesRef.limitToLast(10).on('child_added', function(snapshot) {
     messageList[0].scrollTop = messageList[0].scrollHeight;
 
 });
-
-//=========START MARIAH'S PREVIOUS JAVASCRIPT ====== 
-
-// $( document ).ready(function() {
-//   var url ='https://rcb-mm-app.firebaseio.com/';
-//   // Firebase link
-//   var dataRef = new Firebase("rcb-mm-app.firebaseio.com/");
-//   // Initial Values
-//   var eventName = "";
-//   var eventDate = "";
-//   var eventTime = 0;
-//   var eventDescription = "";
-//   var category = "";
-//   var location = "";  
-
-//   $('#addEvent').on('click', function (){
-//   // alert('hi');
-
-//   // Grabbed values from text boxes
-//   eventName = $('.eventName').val().trim();
-//   eventDate = $('.eventDate').val().trim();
-//   eventTime = $('.eventTime').val().trim();
-//   eventDescription = $('.eventDescription').val().trim()
-//   category = $('.eventCat').val().trim()
-//   location = $('.eventLocation').val().trim();
-//   // Code for handling the push
-
-//   dataRef.push({
-//     eventName: eventName,
-//     eventDate: eventDate,
-//     eventTime: eventTime,
-//     eventDescription: eventDescription,
-//     category: category,
-//     location: location
-//   })
-//   // Don't refresh the page!
-
-
-//   //clear form data
-
-//   $('.eventName').val("");
-//   $('.eventDate').val("");
-//   $('.eventTime').val("");
-//   $('.eventDescription').val("");
-//   $('.category').val("");
-//   $('.location').val("");
-
-//   $('#myModal').dialog('close');
-
-//   return false;
-
-
-//   }); //end click Add Event
-
-
-// dataRef.on("child_added", function(childSnapshot) {
-//   // Log everything that's coming out of snapshot
-//   console.log(childSnapshot.val().eventName);
-//   console.log(childSnapshot.val().eventDate);
-//   console.log(childSnapshot.val().eventTime);
-//   console.log(childSnapshot.val().eventDescription);
-//   console.log(childSnapshot.val().category);
-//   console.log(childSnapshot.val().location)
-
-//   // full list of items to the well
-
-//     // var newEntry = $('<div>');
-
-
-//   // $('#testdiv').append("<div class='well'><span id='eventName'>
-//   // "+childSnapshot.val().eventName+" </span><span id='eventDate'>
-//   // "+childSnapshot.val().eventDate+" </span><span id='eventTime'>
-//   // "+childSnapshot.val().eventTime+" </span><span id='eventDescription'>
-//   // "+childSnapshot.val().eventDescription+" </span></div>");
-
-//     // $('#testdiv').append(newEntry);
-
-//   $('#testdiv').append("<div class='well'><span id='eventName'> "+childSnapshot.val().eventName+" </span><span id='eventDate'> "+childSnapshot.val().eventDate+" </span><span id='eventTime'> "+childSnapshot.val().eventTime+" </span><span id='eventDescription'> "+childSnapshot.val().eventDescription+" <span id='category'> "+childSnapshot.val().category+" <span id='location'> "+childSnapshot.val().location+"</span></div>")
-
-// // Handle the errors
-// }, function(errorObject){
-//   //console.log("Errors handled: " + errorObject.code)
-// });
-
-// dataRef.orderByChild("dateAdded").on("child_added", function(snapshot){
-//   // Change the HTML to reflect
-//   $("#namedisplay").html(snapshot.val().name);
-//   $("#emaildisplay").html(snapshot.val().email);
-//   $("#agedisplay").html(snapshot.val().age);
-//   $("#commentdisplay").html(snapshot.val().comment);
-// })
-
-
-// }); //end doc on ready
-
-
-// $('#createEventForm').hide();
-
-//=========END MARIAH'S PREVIOUS JAVASCRIPT ======
 
 //Aaron's pie chart
 // Load the Visualization API and the piechart package.

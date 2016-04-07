@@ -30,8 +30,7 @@ An app created for Rutgers Students to create group events with their fellow cla
 * Javascript
 * moment.js(momentarily) 
 * Firebase
-* (name) weather API
-* (name) pie chart API
+* Sqoot weather API
 
 
 <br><br><br>
